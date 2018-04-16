@@ -16,7 +16,8 @@ extension DependencyContainer: MenuModulFactory {
     func makeMenuModule() -> UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "MenuViewController") as! MenuViewController
-        _ = MenuPresenter(view: vc)
+        let presenter = MenuPresenter(view: vc)
+        vc.presenter = presenter
         return vc
     }
 }

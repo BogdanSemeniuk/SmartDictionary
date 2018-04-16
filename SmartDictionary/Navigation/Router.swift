@@ -23,15 +23,14 @@ class Router: Navigator {
     // MARK: - Navigation
     
     func navigate(to destination: Router.Destination) {
-        
+        let vc = makeModul(for: destination)
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     private func makeModul(for destination: Destination) -> UIViewController {
         switch destination {
-        case .menu: dependencyContainer
-        case .search: break
+        case .menu: return dependencyContainer.makeMenuModule()
         }
-        return UIViewController()
     }
 }
 
@@ -40,7 +39,6 @@ class Router: Navigator {
 extension Router {
     enum Destination {
         case menu
-        case search
     }
 }
 
