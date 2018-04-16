@@ -23,7 +23,7 @@ class Router: Navigator {
     // MARK: - Navigation
     
     func navigate(to destination: Router.Destination) {
-        <#code#>
+        
     }
     
     private func makeModul(for destination: Destination) -> UIViewController {
@@ -31,6 +31,7 @@ class Router: Navigator {
         case .menu: dependencyContainer
         case .search: break
         }
+        return UIViewController()
     }
 }
 

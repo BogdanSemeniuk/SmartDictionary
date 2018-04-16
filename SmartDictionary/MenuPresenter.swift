@@ -7,3 +7,26 @@
 //
 
 import Foundation
+
+class MenuPresenter: MenuViewPresenter {
+    
+    // MARK: - Properties
+    
+    private weak var view: MenuView?
+    
+    // MARK: - Initializer
+    
+    init(view: MenuView) {
+        self.view = view
+    }
+    
+    deinit {
+        print("MenuPresenter deinit")
+    }
+}
+
+// MARK: - MenuViewPresenter protocol
+
+protocol MenuViewPresenter {
+    
+}
