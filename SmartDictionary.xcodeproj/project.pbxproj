@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4364E61F208637120048E9EA /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4364E61E208637120048E9EA /* SearchViewController.swift */; };
 		4364E621208637260048E9EA /* SearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4364E620208637260048E9EA /* SearchPresenter.swift */; };
+		4364E636208640F70048E9EA /* MenuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4364E635208640F70048E9EA /* MenuTests.swift */; };
 		438117732084C0FF00BA0EB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438117722084C0FF00BA0EB7 /* AppDelegate.swift */; };
 		438117782084C0FF00BA0EB7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 438117762084C0FF00BA0EB7 /* Main.storyboard */; };
 		4381177A2084C10100BA0EB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 438117792084C10100BA0EB7 /* Assets.xcassets */; };
@@ -21,9 +22,22 @@
 		438117972084EFA500BA0EB7 /* MenuPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438117962084EFA500BA0EB7 /* MenuPresenter.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		4364E62C2086402E0048E9EA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 438117672084C0FF00BA0EB7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4381176E2084C0FF00BA0EB7;
+			remoteInfo = SmartDictionary;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		4364E61E208637120048E9EA /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		4364E620208637260048E9EA /* SearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenter.swift; sourceTree = "<group>"; };
+		4364E6272086402E0048E9EA /* SmartDictionaryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmartDictionaryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4364E62B2086402E0048E9EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4364E635208640F70048E9EA /* MenuTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTests.swift; sourceTree = "<group>"; };
 		4381176F2084C0FF00BA0EB7 /* SmartDictionary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartDictionary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		438117722084C0FF00BA0EB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		438117772084C0FF00BA0EB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -39,6 +53,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		4364E6242086402E0048E9EA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4381176C2084C0FF00BA0EB7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -67,10 +88,20 @@
 			path = "Search Module";
 			sourceTree = "<group>";
 		};
+		4364E6282086402E0048E9EA /* SmartDictionaryTests */ = {
+			isa = PBXGroup;
+			children = (
+				4364E635208640F70048E9EA /* MenuTests.swift */,
+				4364E62B2086402E0048E9EA /* Info.plist */,
+			);
+			path = SmartDictionaryTests;
+			sourceTree = "<group>";
+		};
 		438117662084C0FF00BA0EB7 = {
 			isa = PBXGroup;
 			children = (
 				438117712084C0FF00BA0EB7 /* SmartDictionary */,
+				4364E6282086402E0048E9EA /* SmartDictionaryTests */,
 				438117702084C0FF00BA0EB7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -79,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				4381176F2084C0FF00BA0EB7 /* SmartDictionary.app */,
+				4364E6272086402E0048E9EA /* SmartDictionaryTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -128,6 +160,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		4364E6262086402E0048E9EA /* SmartDictionaryTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4364E6302086402E0048E9EA /* Build configuration list for PBXNativeTarget "SmartDictionaryTests" */;
+			buildPhases = (
+				4364E6232086402E0048E9EA /* Sources */,
+				4364E6242086402E0048E9EA /* Frameworks */,
+				4364E6252086402E0048E9EA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4364E62D2086402E0048E9EA /* PBXTargetDependency */,
+			);
+			name = SmartDictionaryTests;
+			productName = SmartDictionaryTests;
+			productReference = 4364E6272086402E0048E9EA /* SmartDictionaryTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		4381176E2084C0FF00BA0EB7 /* SmartDictionary */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 438117812084C10100BA0EB7 /* Build configuration list for PBXNativeTarget "SmartDictionary" */;
@@ -155,6 +205,10 @@
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = Bogdan;
 				TargetAttributes = {
+					4364E6262086402E0048E9EA = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = 4381176E2084C0FF00BA0EB7;
+					};
 					4381176E2084C0FF00BA0EB7 = {
 						CreatedOnToolsVersion = 9.3;
 					};
@@ -174,11 +228,19 @@
 			projectRoot = "";
 			targets = (
 				4381176E2084C0FF00BA0EB7 /* SmartDictionary */,
+				4364E6262086402E0048E9EA /* SmartDictionaryTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		4364E6252086402E0048E9EA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4381176D2084C0FF00BA0EB7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -192,6 +254,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		4364E6232086402E0048E9EA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4364E636208640F70048E9EA /* MenuTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4381176B2084C0FF00BA0EB7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -209,6 +279,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4364E62D2086402E0048E9EA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4381176E2084C0FF00BA0EB7 /* SmartDictionary */;
+			targetProxy = 4364E62C2086402E0048E9EA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		438117762084C0FF00BA0EB7 /* Main.storyboard */ = {
@@ -230,6 +308,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		4364E62E2086402E0048E9EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4V89KEZWRU;
+				INFOPLIST_FILE = SmartDictionaryTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = sbv24051989.SmartDictionaryTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SmartDictionary.app/SmartDictionary";
+			};
+			name = Debug;
+		};
+		4364E62F2086402E0048E9EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4V89KEZWRU;
+				INFOPLIST_FILE = SmartDictionaryTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = sbv24051989.SmartDictionaryTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SmartDictionary.app/SmartDictionary";
+			};
+			name = Release;
+		};
 		4381177F2084C10100BA0EB7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -383,6 +501,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		4364E6302086402E0048E9EA /* Build configuration list for PBXNativeTarget "SmartDictionaryTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4364E62E2086402E0048E9EA /* Debug */,
+				4364E62F2086402E0048E9EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4381176A2084C0FF00BA0EB7 /* Build configuration list for PBXProject "SmartDictionary" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
