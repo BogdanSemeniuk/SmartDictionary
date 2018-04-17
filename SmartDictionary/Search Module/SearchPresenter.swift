@@ -9,6 +9,9 @@
 import Foundation
 
 class SearchPresenter: SearchViewPresenter {
+    
+    // MARK: - Properties
+    
     private weak var view: SearchView?
     
     // MARK: - Initializer

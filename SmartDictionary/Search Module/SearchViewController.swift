@@ -9,6 +9,9 @@
 import UIKit
 
 class SearchViewController: UIViewController, SearchView {
+    
+    // MARK: - Properties and outlet
+    
     var presenter: SearchViewPresenter!
     
     deinit { print("SearchViewController deinit") }
