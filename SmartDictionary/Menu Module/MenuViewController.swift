@@ -21,15 +21,22 @@ class MenuViewController: UIViewController, MenuView {
     
     deinit { print("MenuViewController deinit") }
     
+    // MARK: - Set navigation title
+    
     func setupView() {
         navigationItem.title = "Menu"
     }
     
+    // MARK: - Actions
+    
     @IBAction func searchButtonTapped(_ sender: UIButton) {
+        presenter.searchButtonWasTapped()
     }
     @IBAction func dictionaryButtonTapped(_ sender: UIButton) {
+        
     }
     @IBAction func trainingButtonTapped(_ sender: UIButton) {
+        
     }
     
     

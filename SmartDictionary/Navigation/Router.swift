@@ -30,6 +30,7 @@ class Router: Navigator {
     private func makeModul(for destination: Destination) -> UIViewController {
         switch destination {
         case .menu: return dependencyContainer.makeMenuModule(router: self)
+        case .search: return dependencyContainer.makeSearchModule()
         }
     }
 }
@@ -39,6 +40,7 @@ class Router: Navigator {
 extension Router {
     enum Destination {
         case menu
+        case search
     }
 }
 

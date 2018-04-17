@@ -12,6 +12,10 @@ protocol MenuModulFactory {
     func makeMenuModule(router: Router) -> UIViewController
 }
 
+protocol SearchModulFactory {
+    func makeSearchModule() -> UIViewController
+}
+
 extension DependencyContainer: MenuModulFactory {
     func makeMenuModule(router: Router) -> UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -22,3 +26,12 @@ extension DependencyContainer: MenuModulFactory {
     }
 }
 
+extension DependencyContainer: SearchModulFactory {
+    func makeSearchModule() -> UIViewController {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "SearchViewController") as! SearchViewController
+        let presenter = SearchPresenter(view: vc)
+        vc.presenter = presenter
+        return vc
+    }
+}

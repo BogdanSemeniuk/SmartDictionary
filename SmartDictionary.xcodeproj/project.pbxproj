@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4364E61F208637120048E9EA /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4364E61E208637120048E9EA /* SearchViewController.swift */; };
+		4364E621208637260048E9EA /* SearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4364E620208637260048E9EA /* SearchPresenter.swift */; };
 		438117732084C0FF00BA0EB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438117722084C0FF00BA0EB7 /* AppDelegate.swift */; };
 		438117782084C0FF00BA0EB7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 438117762084C0FF00BA0EB7 /* Main.storyboard */; };
 		4381177A2084C10100BA0EB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 438117792084C10100BA0EB7 /* Assets.xcassets */; };
@@ -20,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4364E61E208637120048E9EA /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		4364E620208637260048E9EA /* SearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenter.swift; sourceTree = "<group>"; };
 		4381176F2084C0FF00BA0EB7 /* SmartDictionary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartDictionary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		438117722084C0FF00BA0EB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		438117772084C0FF00BA0EB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -45,6 +49,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4364E61D208636110048E9EA /* Menu Module */ = {
+			isa = PBXGroup;
+			children = (
+				438117942084EEC100BA0EB7 /* MenuViewController.swift */,
+				438117962084EFA500BA0EB7 /* MenuPresenter.swift */,
+			);
+			path = "Menu Module";
+			sourceTree = "<group>";
+		};
+		4364E622208637350048E9EA /* Search Module */ = {
+			isa = PBXGroup;
+			children = (
+				4364E61E208637120048E9EA /* SearchViewController.swift */,
+				4364E620208637260048E9EA /* SearchPresenter.swift */,
+			);
+			path = "Search Module";
+			sourceTree = "<group>";
+		};
 		438117662084C0FF00BA0EB7 = {
 			isa = PBXGroup;
 			children = (
@@ -66,10 +88,10 @@
 			children = (
 				438117722084C0FF00BA0EB7 /* AppDelegate.swift */,
 				438117902084EB2F00BA0EB7 /* Navigation */,
-				438117912084EC4800BA0EB7 /* DependencyContainer */,
+				438117912084EC4800BA0EB7 /* Dependency Container */,
 				438117762084C0FF00BA0EB7 /* Main.storyboard */,
-				438117942084EEC100BA0EB7 /* MenuViewController.swift */,
-				438117962084EFA500BA0EB7 /* MenuPresenter.swift */,
+				4364E622208637350048E9EA /* Search Module */,
+				4364E61D208636110048E9EA /* Menu Module */,
 				4381177E2084C10100BA0EB7 /* Info.plist */,
 				438117842084C15500BA0EB7 /* Supporting Files */,
 			);
@@ -94,13 +116,13 @@
 			path = Navigation;
 			sourceTree = "<group>";
 		};
-		438117912084EC4800BA0EB7 /* DependencyContainer */ = {
+		438117912084EC4800BA0EB7 /* Dependency Container */ = {
 			isa = PBXGroup;
 			children = (
 				4381178E2084EA1E00BA0EB7 /* DependencyContainer.swift */,
 				438117922084ECD300BA0EB7 /* Factory.swift */,
 			);
-			path = DependencyContainer;
+			path = "Dependency Container";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,6 +198,8 @@
 			files = (
 				4381178B2084E7BB00BA0EB7 /* Router.swift in Sources */,
 				438117952084EEC100BA0EB7 /* MenuViewController.swift in Sources */,
+				4364E621208637260048E9EA /* SearchPresenter.swift in Sources */,
+				4364E61F208637120048E9EA /* SearchViewController.swift in Sources */,
 				438117732084C0FF00BA0EB7 /* AppDelegate.swift in Sources */,
 				438117932084ECD300BA0EB7 /* Factory.swift in Sources */,
 				4381178F2084EA1E00BA0EB7 /* DependencyContainer.swift in Sources */,

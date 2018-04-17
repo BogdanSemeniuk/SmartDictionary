@@ -24,8 +24,24 @@ class MenuPresenter: MenuViewPresenter {
     
     deinit { print("MenuPresenter deinit") }
     
+    // MARK: - Setup view
+    
     func viewWasLoaded() {
         view?.setupView()
+    }
+    
+    // MARK: - Handling actions
+    
+    func searchButtonWasTapped() {
+        router.navigate(to: .search)
+    }
+    
+    func dictionaryButtonWasTapped() {
+        
+    }
+    
+    func trainingButtonWasTapped() {
+        
     }
 }
 
@@ -33,4 +49,7 @@ class MenuPresenter: MenuViewPresenter {
 
 protocol MenuViewPresenter {
     func viewWasLoaded()
+    func searchButtonWasTapped()
+    func dictionaryButtonWasTapped()
+    func trainingButtonWasTapped()
 }
