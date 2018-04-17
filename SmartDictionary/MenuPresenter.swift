@@ -13,20 +13,24 @@ class MenuPresenter: MenuViewPresenter {
     // MARK: - Properties
     
     private weak var view: MenuView?
+    private var router: Router
     
     // MARK: - Initializer
     
-    init(view: MenuView) {
+    init(view: MenuView, router: Router) {
         self.view = view
+        self.router = router
     }
     
-    deinit {
-        print("MenuPresenter deinit")
+    deinit { print("MenuPresenter deinit") }
+    
+    func viewWasLoaded() {
+        view?.setupView()
     }
 }
 
 // MARK: - MenuViewPresenter protocol
 
 protocol MenuViewPresenter {
-    
+    func viewWasLoaded()
 }

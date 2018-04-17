@@ -29,7 +29,7 @@ class Router: Navigator {
     
     private func makeModul(for destination: Destination) -> UIViewController {
         switch destination {
-        case .menu: return dependencyContainer.makeMenuModule()
+        case .menu: return dependencyContainer.makeMenuModule(router: self)
         }
     }
 }

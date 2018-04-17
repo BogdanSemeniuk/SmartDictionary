@@ -14,13 +14,29 @@ class MenuViewController: UIViewController, MenuView {
     
     var presenter: MenuViewPresenter!
     
-    deinit {
-        print("MenuViewController deinit")
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        presenter.viewWasLoaded()
     }
+    
+    deinit { print("MenuViewController deinit") }
+    
+    func setupView() {
+        navigationItem.title = "Menu"
+    }
+    
+    @IBAction func searchButtonTapped(_ sender: UIButton) {
+    }
+    @IBAction func dictionaryButtonTapped(_ sender: UIButton) {
+    }
+    @IBAction func trainingButtonTapped(_ sender: UIButton) {
+    }
+    
+    
 }
 
 // MARK: - MenuView protocol
 
 protocol MenuView: class {
-    
+    func setupView()
 }
