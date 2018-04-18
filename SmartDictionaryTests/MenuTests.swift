@@ -13,7 +13,7 @@ class MenuTests: XCTestCase {
     
     var menuPresenter: MenuPresenter!
     var view: MenuViewController!
-    var router: Router!
+    var router: MockRouter!
     var nc: UINavigationController!
     var depenpencyContainer: DependencyContainer!
     
@@ -21,9 +21,11 @@ class MenuTests: XCTestCase {
         super.setUp()
         nc = UINavigationController()
         depenpencyContainer = DependencyContainer()
-        router = Router(navigationController: nc, dependencyContainer: depenpencyContainer)
-        view = MenuViewController()
+        router = MockRouter(navigationController: nc, dependencyContainer: depenpencyContainer)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        view = storyboard.instantiateViewController(withIdentifier: "MenuViewController") as! MenuViewController
         menuPresenter = MenuPresenter(view: view, router: router)
+        view.presenter = menuPresenter
     }
     
     override func tearDown() {
@@ -35,7 +37,10 @@ class MenuTests: XCTestCase {
         depenpencyContainer = nil
     }
     
-    func testExample() {
-        
+    func testNavigateMethodCalledWhenSearchButtonTapped() {
+        let button = UIButton()
+        XCTAssertNil(router.currentNavigation, "MockRouter.currentNavigation is not nil")
+        view.searchButtonTapped(button)
+        XCTAssertNotNil(router.currentNavigation, "Navigation method was not call")
     }
 }
