@@ -34,7 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         navigationBarAppearace.tintColor = UIColor.white
         let titleTextAttributed: [NSAttributedStringKey: Any] =
             [.foregroundColor: UIColor.white,
-            .font: UIFont(name: "AmericanTypewriter-Bold", size: 28) as Any]
+            .font: UIFont(name: "AmericanTypewriter-Bold", size: 18) as Any]
         navigationController.navigationBar.titleTextAttributes = titleTextAttributed
         
     }
