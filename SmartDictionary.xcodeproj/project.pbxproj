@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		238492E79E5D33E91DA833A3 /* Pods_SmartDictionary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 540546CE7E3517F5233C2F2F /* Pods_SmartDictionary.framework */; };
+		434ED98D208A592600A427FA /* ApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434ED98C208A592600A427FA /* ApiRequest.swift */; };
+		434ED98F208A594400A427FA /* ApiConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434ED98E208A594400A427FA /* ApiConstants.swift */; };
 		4364E61F208637120048E9EA /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4364E61E208637120048E9EA /* SearchViewController.swift */; };
 		4364E621208637260048E9EA /* SearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4364E620208637260048E9EA /* SearchPresenter.swift */; };
 		4364E636208640F70048E9EA /* MenuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4364E635208640F70048E9EA /* MenuTests.swift */; };
@@ -21,6 +24,8 @@
 		438117932084ECD300BA0EB7 /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438117922084ECD300BA0EB7 /* Factory.swift */; };
 		438117952084EEC100BA0EB7 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438117942084EEC100BA0EB7 /* MenuViewController.swift */; };
 		438117972084EFA500BA0EB7 /* MenuPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438117962084EFA500BA0EB7 /* MenuPresenter.swift */; };
+		4396ED52208A095600452430 /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4396ED51208A095600452430 /* NetworkingManager.swift */; };
+		D7EFA16778E329DED7E42750 /* Pods_SmartDictionaryTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3979245EE0DAD3FA7F4CC9C6 /* Pods_SmartDictionaryTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +39,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3979245EE0DAD3FA7F4CC9C6 /* Pods_SmartDictionaryTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartDictionaryTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		434ED98C208A592600A427FA /* ApiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequest.swift; sourceTree = "<group>"; };
+		434ED98E208A594400A427FA /* ApiConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConstants.swift; sourceTree = "<group>"; };
 		4364E61E208637120048E9EA /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		4364E620208637260048E9EA /* SearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenter.swift; sourceTree = "<group>"; };
 		4364E6272086402E0048E9EA /* SmartDictionaryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmartDictionaryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,6 +60,12 @@
 		438117922084ECD300BA0EB7 /* Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
 		438117942084EEC100BA0EB7 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		438117962084EFA500BA0EB7 /* MenuPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPresenter.swift; sourceTree = "<group>"; };
+		4396ED51208A095600452430 /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
+		540546CE7E3517F5233C2F2F /* Pods_SmartDictionary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartDictionary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9F078EF77A09209DBB9FCBB /* Pods-SmartDictionary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartDictionary.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmartDictionary/Pods-SmartDictionary.release.xcconfig"; sourceTree = "<group>"; };
+		D834753B35F31367B2B9ED1F /* Pods-SmartDictionaryTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartDictionaryTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmartDictionaryTests/Pods-SmartDictionaryTests.release.xcconfig"; sourceTree = "<group>"; };
+		E49A6CAC87DBC3DC6670745E /* Pods-SmartDictionary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartDictionary.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmartDictionary/Pods-SmartDictionary.debug.xcconfig"; sourceTree = "<group>"; };
+		FA475B5F114BB0EAF3ECC60A /* Pods-SmartDictionaryTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartDictionaryTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmartDictionaryTests/Pods-SmartDictionaryTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7EFA16778E329DED7E42750 /* Pods_SmartDictionaryTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,12 +81,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				238492E79E5D33E91DA833A3 /* Pods_SmartDictionary.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		434ED98B208A4B1800A427FA /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				4396ED51208A095600452430 /* NetworkingManager.swift */,
+				434ED98C208A592600A427FA /* ApiRequest.swift */,
+				434ED98E208A594400A427FA /* ApiConstants.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		4364E61D208636110048E9EA /* Menu Module */ = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +132,8 @@
 				438117712084C0FF00BA0EB7 /* SmartDictionary */,
 				4364E6282086402E0048E9EA /* SmartDictionaryTests */,
 				438117702084C0FF00BA0EB7 /* Products */,
+				E3542D4BC4D6557D40E4F50B /* Pods */,
+				AEDB0427329331CD4827861A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -122,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				438117722084C0FF00BA0EB7 /* AppDelegate.swift */,
+				434ED98B208A4B1800A427FA /* Networking */,
 				438117902084EB2F00BA0EB7 /* Navigation */,
 				438117912084EC4800BA0EB7 /* Dependency Container */,
 				438117762084C0FF00BA0EB7 /* Main.storyboard */,
@@ -160,6 +189,26 @@
 			path = "Dependency Container";
 			sourceTree = "<group>";
 		};
+		AEDB0427329331CD4827861A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				540546CE7E3517F5233C2F2F /* Pods_SmartDictionary.framework */,
+				3979245EE0DAD3FA7F4CC9C6 /* Pods_SmartDictionaryTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E3542D4BC4D6557D40E4F50B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E49A6CAC87DBC3DC6670745E /* Pods-SmartDictionary.debug.xcconfig */,
+				C9F078EF77A09209DBB9FCBB /* Pods-SmartDictionary.release.xcconfig */,
+				FA475B5F114BB0EAF3ECC60A /* Pods-SmartDictionaryTests.debug.xcconfig */,
+				D834753B35F31367B2B9ED1F /* Pods-SmartDictionaryTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -167,6 +216,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4364E6302086402E0048E9EA /* Build configuration list for PBXNativeTarget "SmartDictionaryTests" */;
 			buildPhases = (
+				4B68A03E7377B0077C283C7E /* [CP] Check Pods Manifest.lock */,
 				4364E6232086402E0048E9EA /* Sources */,
 				4364E6242086402E0048E9EA /* Frameworks */,
 				4364E6252086402E0048E9EA /* Resources */,
@@ -185,9 +235,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 438117812084C10100BA0EB7 /* Build configuration list for PBXNativeTarget "SmartDictionary" */;
 			buildPhases = (
+				352B2E9CF05B8513389406A1 /* [CP] Check Pods Manifest.lock */,
 				4381176B2084C0FF00BA0EB7 /* Sources */,
 				4381176C2084C0FF00BA0EB7 /* Frameworks */,
 				4381176D2084C0FF00BA0EB7 /* Resources */,
+				0498A6F4F307E35E1CB1E626 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -256,6 +308,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0498A6F4F307E35E1CB1E626 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SmartDictionary/Pods-SmartDictionary-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SmartDictionary/Pods-SmartDictionary-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		352B2E9CF05B8513389406A1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SmartDictionary-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4B68A03E7377B0077C283C7E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SmartDictionaryTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4364E6232086402E0048E9EA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -273,11 +382,14 @@
 				4381178B2084E7BB00BA0EB7 /* Router.swift in Sources */,
 				438117952084EEC100BA0EB7 /* MenuViewController.swift in Sources */,
 				4364E621208637260048E9EA /* SearchPresenter.swift in Sources */,
+				4396ED52208A095600452430 /* NetworkingManager.swift in Sources */,
 				4364E61F208637120048E9EA /* SearchViewController.swift in Sources */,
 				438117732084C0FF00BA0EB7 /* AppDelegate.swift in Sources */,
 				438117932084ECD300BA0EB7 /* Factory.swift in Sources */,
 				4381178F2084EA1E00BA0EB7 /* DependencyContainer.swift in Sources */,
+				434ED98F208A594400A427FA /* ApiConstants.swift in Sources */,
 				4381178D2084E98F00BA0EB7 /* Navigator.swift in Sources */,
+				434ED98D208A592600A427FA /* ApiRequest.swift in Sources */,
 				438117972084EFA500BA0EB7 /* MenuPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -314,6 +426,7 @@
 /* Begin XCBuildConfiguration section */
 		4364E62E2086402E0048E9EA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FA475B5F114BB0EAF3ECC60A /* Pods-SmartDictionaryTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -334,6 +447,7 @@
 		};
 		4364E62F2086402E0048E9EA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D834753B35F31367B2B9ED1F /* Pods-SmartDictionaryTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -468,6 +582,7 @@
 		};
 		438117822084C10100BA0EB7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E49A6CAC87DBC3DC6670745E /* Pods-SmartDictionary.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -486,6 +601,7 @@
 		};
 		438117832084C10100BA0EB7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C9F078EF77A09209DBB9FCBB /* Pods-SmartDictionary.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

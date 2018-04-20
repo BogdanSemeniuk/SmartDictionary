@@ -12,8 +12,6 @@ class SearchViewController: UIViewController, SearchView {
     
     // MARK: - Properties and outlet
     
-    @IBOutlet weak var searchBar: UISearchBar!
-    @IBOutlet weak var tableView: UITableView!
     var presenter: SearchViewPresenter!
     
     deinit { print("SearchViewController deinit") }

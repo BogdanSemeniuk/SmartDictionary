@@ -167,38 +167,43 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Enter the word" translatesAutoresizingMaskIntoConstraints="NO" id="4SF-6y-tmu">
-                                <rect key="frame" x="0.0" y="20" width="320" height="56"/>
+                                <rect key="frame" x="10" y="30" width="300" height="56"/>
                                 <color key="barTintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <textInputTraits key="textInputTraits" spellCheckingType="yes" smartDashesType="no"/>
                                 <connections>
-                                    <outlet property="delegate" destination="Jsi-lb-IEE" id="uGJ-op-7zT"/>
+                                    <outlet property="delegate" destination="Jsi-lb-IEE" id="P4x-Py-Z3X"/>
                                 </connections>
                             </searchBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2zV-Lq-XEU">
-                                <rect key="frame" x="0.0" y="76" width="320" height="492"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iBY-3k-lEW">
+                                <rect key="frame" x="0.0" y="96" width="320" height="419"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
-                                    <outlet property="dataSource" destination="Jsi-lb-IEE" id="0R6-Mg-tOR"/>
-                                    <outlet property="delegate" destination="Jsi-lb-IEE" id="8dk-rr-SIH"/>
+                                    <outlet property="dataSource" destination="Jsi-lb-IEE" id="n4X-eR-FM5"/>
+                                    <outlet property="delegate" destination="Jsi-lb-IEE" id="sGJ-Q3-Ud4"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p1f-db-kIu">
+                                <rect key="frame" x="89.5" y="520" width="141" height="33"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="Add to dictionary">
+                                    <color key="titleColor" red="0.0" green="0.56284224989999998" blue="0.31881666180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="2zV-Lq-XEU" firstAttribute="top" secondItem="4SF-6y-tmu" secondAttribute="bottom" id="36J-yz-rxJ"/>
-                            <constraint firstItem="4SF-6y-tmu" firstAttribute="top" secondItem="DOq-cq-FWt" secondAttribute="top" id="HDr-Vx-7WY"/>
-                            <constraint firstItem="4SF-6y-tmu" firstAttribute="leading" secondItem="DOq-cq-FWt" secondAttribute="leading" id="NLq-tK-DH5"/>
-                            <constraint firstItem="2zV-Lq-XEU" firstAttribute="leading" secondItem="DOq-cq-FWt" secondAttribute="leading" id="P0I-W1-xOK"/>
-                            <constraint firstItem="2zV-Lq-XEU" firstAttribute="trailing" secondItem="DOq-cq-FWt" secondAttribute="trailing" id="RYa-lM-bdd"/>
-                            <constraint firstItem="2zV-Lq-XEU" firstAttribute="bottom" secondItem="DOq-cq-FWt" secondAttribute="bottom" id="eX0-GB-9kn"/>
-                            <constraint firstItem="4SF-6y-tmu" firstAttribute="trailing" secondItem="DOq-cq-FWt" secondAttribute="trailing" id="rA3-He-day"/>
+                            <constraint firstItem="iBY-3k-lEW" firstAttribute="leading" secondItem="DOq-cq-FWt" secondAttribute="leading" id="69n-ao-bOH"/>
+                            <constraint firstItem="p1f-db-kIu" firstAttribute="centerX" secondItem="SRg-Zk-sfO" secondAttribute="centerX" id="6H2-S0-141"/>
+                            <constraint firstItem="DOq-cq-FWt" firstAttribute="trailing" secondItem="iBY-3k-lEW" secondAttribute="trailing" id="MzP-lO-yNB"/>
+                            <constraint firstItem="iBY-3k-lEW" firstAttribute="top" secondItem="4SF-6y-tmu" secondAttribute="bottom" constant="10" id="Wbt-dR-t11"/>
+                            <constraint firstItem="DOq-cq-FWt" firstAttribute="bottom" secondItem="p1f-db-kIu" secondAttribute="bottom" constant="15" id="ZkK-xF-nCi"/>
+                            <constraint firstItem="4SF-6y-tmu" firstAttribute="top" secondItem="DOq-cq-FWt" secondAttribute="top" constant="10" id="aRl-ib-dhA"/>
+                            <constraint firstItem="4SF-6y-tmu" firstAttribute="leading" secondItem="DOq-cq-FWt" secondAttribute="leading" constant="10" id="dDz-FW-ioB"/>
+                            <constraint firstItem="DOq-cq-FWt" firstAttribute="trailing" secondItem="4SF-6y-tmu" secondAttribute="trailing" constant="10" id="eXx-0H-VPC"/>
+                            <constraint firstItem="p1f-db-kIu" firstAttribute="top" secondItem="iBY-3k-lEW" secondAttribute="bottom" constant="5" id="hEW-xI-WUB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="DOq-cq-FWt"/>
                     </view>
-                    <connections>
-                        <outlet property="searchBar" destination="4SF-6y-tmu" id="8mW-Gf-Dp7"/>
-                        <outlet property="tableView" destination="2zV-Lq-XEU" id="YPn-QM-rLq"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vH3-aW-0jX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
