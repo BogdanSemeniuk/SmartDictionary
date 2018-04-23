@@ -8,6 +8,11 @@
 
 import UIKit
 
+protocol Navigator {
+    associatedtype Destination
+    func navigate(to destination: Destination)
+}
+
 class Router: Navigator {
     
     private weak var navigationController: UINavigationController?

@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol MenuView: class {
+    func setupView()
+}
+
 class MenuViewController: UIViewController, MenuView {
     
     // MARK: - Properties and outlet
@@ -40,10 +44,4 @@ class MenuViewController: UIViewController, MenuView {
     }
     
     
-}
-
-// MARK: - MenuView protocol
-
-protocol MenuView: class {
-    func setupView()
 }

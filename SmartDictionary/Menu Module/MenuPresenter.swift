@@ -8,6 +8,13 @@
 
 import Foundation
 
+protocol MenuViewPresenter {
+    func viewWasLoaded()
+    func searchButtonWasTapped()
+    func dictionaryButtonWasTapped()
+    func trainingButtonWasTapped()
+}
+
 class MenuPresenter: MenuViewPresenter {
     
     // MARK: - Properties
@@ -43,13 +50,4 @@ class MenuPresenter: MenuViewPresenter {
     func trainingButtonWasTapped() {
         
     }
-}
-
-// MARK: - MenuViewPresenter protocol
-
-protocol MenuViewPresenter {
-    func viewWasLoaded()
-    func searchButtonWasTapped()
-    func dictionaryButtonWasTapped()
-    func trainingButtonWasTapped()
 }

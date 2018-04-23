@@ -8,21 +8,29 @@
 
 import Foundation
 
+protocol SearchViewPresenter {
+    func searchButtonPressed(text: String)
+}
+
 class SearchPresenter: SearchViewPresenter {
-    
     // MARK: - Properties
     
     private weak var view: SearchView?
+    private var networkingManager: TranslateManager
     
     // MARK: - Initializer
     
-    init(view: SearchView) {
+    init(view: SearchView, networkingManager: TranslateManager) {
         self.view = view
+        self.networkingManager = networkingManager
     }
     deinit { print("SearchPresenter deinit") }
-}
-
-// MARK: - SearchViewPresenter protocol
-
-protocol SearchViewPresenter {
+    
+    // MARK: - Action handling
+    
+    func searchButtonPressed(text: String) {
+        networkingManager.translate(word: text) {
+            
+        }
+    }
 }

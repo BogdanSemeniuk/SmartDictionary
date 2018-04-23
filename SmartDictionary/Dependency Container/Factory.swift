@@ -30,7 +30,7 @@ extension DependencyContainer: SearchModulFactory {
     func makeSearchModule() -> UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "SearchViewController") as! SearchViewController
-        let presenter = SearchPresenter(view: vc)
+        let presenter = SearchPresenter(view: vc, networkingManager: self.networkingManager)
         vc.presenter = presenter
         return vc
     }

@@ -10,6 +10,7 @@
 		238492E79E5D33E91DA833A3 /* Pods_SmartDictionary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 540546CE7E3517F5233C2F2F /* Pods_SmartDictionary.framework */; };
 		434ED98D208A592600A427FA /* ApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434ED98C208A592600A427FA /* ApiRequest.swift */; };
 		434ED98F208A594400A427FA /* ApiConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434ED98E208A594400A427FA /* ApiConstants.swift */; };
+		4358870B208DD94600BF2511 /* WordDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4358870A208DD94600BF2511 /* WordDetails.swift */; };
 		4364E61F208637120048E9EA /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4364E61E208637120048E9EA /* SearchViewController.swift */; };
 		4364E621208637260048E9EA /* SearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4364E620208637260048E9EA /* SearchPresenter.swift */; };
 		4364E636208640F70048E9EA /* MenuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4364E635208640F70048E9EA /* MenuTests.swift */; };
@@ -19,7 +20,6 @@
 		4381177A2084C10100BA0EB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 438117792084C10100BA0EB7 /* Assets.xcassets */; };
 		4381177D2084C10100BA0EB7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4381177B2084C10100BA0EB7 /* LaunchScreen.storyboard */; };
 		4381178B2084E7BB00BA0EB7 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4381178A2084E7BB00BA0EB7 /* Router.swift */; };
-		4381178D2084E98F00BA0EB7 /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4381178C2084E98F00BA0EB7 /* Navigator.swift */; };
 		4381178F2084EA1E00BA0EB7 /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4381178E2084EA1E00BA0EB7 /* DependencyContainer.swift */; };
 		438117932084ECD300BA0EB7 /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438117922084ECD300BA0EB7 /* Factory.swift */; };
 		438117952084EEC100BA0EB7 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438117942084EEC100BA0EB7 /* MenuViewController.swift */; };
@@ -42,6 +42,7 @@
 		3979245EE0DAD3FA7F4CC9C6 /* Pods_SmartDictionaryTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartDictionaryTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		434ED98C208A592600A427FA /* ApiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequest.swift; sourceTree = "<group>"; };
 		434ED98E208A594400A427FA /* ApiConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConstants.swift; sourceTree = "<group>"; };
+		4358870A208DD94600BF2511 /* WordDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordDetails.swift; sourceTree = "<group>"; };
 		4364E61E208637120048E9EA /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		4364E620208637260048E9EA /* SearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenter.swift; sourceTree = "<group>"; };
 		4364E6272086402E0048E9EA /* SmartDictionaryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmartDictionaryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -55,7 +56,6 @@
 		4381177C2084C10100BA0EB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4381177E2084C10100BA0EB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4381178A2084E7BB00BA0EB7 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
-		4381178C2084E98F00BA0EB7 /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
 		4381178E2084EA1E00BA0EB7 /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
 		438117922084ECD300BA0EB7 /* Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
 		438117942084EEC100BA0EB7 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -96,6 +96,14 @@
 				434ED98E208A594400A427FA /* ApiConstants.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		4358870D208DD9A700BF2511 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				4358870A208DD94600BF2511 /* WordDetails.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 		4364E61D208636110048E9EA /* Menu Module */ = {
@@ -150,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				438117722084C0FF00BA0EB7 /* AppDelegate.swift */,
+				4358870D208DD9A700BF2511 /* Entities */,
 				434ED98B208A4B1800A427FA /* Networking */,
 				438117902084EB2F00BA0EB7 /* Navigation */,
 				438117912084EC4800BA0EB7 /* Dependency Container */,
@@ -175,7 +184,6 @@
 			isa = PBXGroup;
 			children = (
 				4381178A2084E7BB00BA0EB7 /* Router.swift */,
-				4381178C2084E98F00BA0EB7 /* Navigator.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -381,6 +389,7 @@
 			files = (
 				4381178B2084E7BB00BA0EB7 /* Router.swift in Sources */,
 				438117952084EEC100BA0EB7 /* MenuViewController.swift in Sources */,
+				4358870B208DD94600BF2511 /* WordDetails.swift in Sources */,
 				4364E621208637260048E9EA /* SearchPresenter.swift in Sources */,
 				4396ED52208A095600452430 /* NetworkingManager.swift in Sources */,
 				4364E61F208637120048E9EA /* SearchViewController.swift in Sources */,
@@ -388,7 +397,6 @@
 				438117932084ECD300BA0EB7 /* Factory.swift in Sources */,
 				4381178F2084EA1E00BA0EB7 /* DependencyContainer.swift in Sources */,
 				434ED98F208A594400A427FA /* ApiConstants.swift in Sources */,
-				4381178D2084E98F00BA0EB7 /* Navigator.swift in Sources */,
 				434ED98D208A592600A427FA /* ApiRequest.swift in Sources */,
 				438117972084EFA500BA0EB7 /* MenuPresenter.swift in Sources */,
 			);

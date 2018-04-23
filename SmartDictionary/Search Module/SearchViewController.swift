@@ -8,6 +8,9 @@
 
 import UIKit
 
+protocol SearchView: class {
+}
+
 class SearchViewController: UIViewController, SearchView {
     
     // MARK: - Properties and outlet
@@ -15,11 +18,6 @@ class SearchViewController: UIViewController, SearchView {
     var presenter: SearchViewPresenter!
     
     deinit { print("SearchViewController deinit") }
-}
-
-// MARK: - SearchView protocol
-
-protocol SearchView: class {
 }
 
 // MARK: - UITableViewDelegate and UITableViewDataSource
@@ -37,5 +35,7 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
 // MARK: - UISearchBarDelegate
 
 extension SearchViewController: UISearchBarDelegate {
-    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        
+    }
 }

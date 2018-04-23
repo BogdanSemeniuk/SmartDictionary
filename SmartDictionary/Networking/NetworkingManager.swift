@@ -9,7 +9,11 @@
 import Foundation
 import Alamofire
 
-class NetworkingManager {
+protocol TranslateManager {
+    func translate(word: String, complition: () -> ())
+}
+
+class NetworkingManager: TranslateManager {
     func translate(word: String, complition: () -> ()) {
         let urlRequest = try! APIRequest.translate(word: word).asURLRequest()
         Alamofire.request(urlRequest).responseJSON { (response) in
@@ -17,3 +21,4 @@ class NetworkingManager {
         }
     }
 }
+
