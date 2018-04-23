@@ -29,7 +29,7 @@ class SearchPresenter: SearchViewPresenter {
     // MARK: - Action handling
     
     func searchButtonPressed(text: String) {
-        networkingManager.translate(word: text) {
+        networkingManager.translate(word: text) { wordDetails in
             
         }
     }

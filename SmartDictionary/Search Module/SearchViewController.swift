@@ -15,6 +15,7 @@ class SearchViewController: UIViewController, SearchView {
     
     // MARK: - Properties and outlet
     
+    @IBOutlet weak var searchBar: UISearchBar!
     var presenter: SearchViewPresenter!
     
     deinit { print("SearchViewController deinit") }
@@ -36,6 +37,6 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
 
 extension SearchViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        
+        presenter.searchButtonPressed(text: searchBar.text!)
     }
 }

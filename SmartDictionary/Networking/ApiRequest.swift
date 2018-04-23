@@ -7,8 +7,8 @@
 //
 
 import Foundation
-
 import Alamofire
+
 
 enum APIRequest {
     case translate(word: String)

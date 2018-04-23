@@ -9,6 +9,7 @@
 import Foundation
 
 class DependencyContainer {
-    lazy var networkingManager = NetworkingManager()
+    lazy var apiClient = ApiClientImplementation()
+    lazy var networkingManager = NetworkingManager(apiClient: apiClient)
 }
 

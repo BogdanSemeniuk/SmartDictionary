@@ -8,6 +8,20 @@
 
 import Foundation
 
-struct WordDetails {
-    
+struct WordDetails: Decodable {
+    var tuc: [WordDescription]
+    var phrase: String
+}
+
+struct WordDescription: Decodable {
+    var phrase: Phrase?
+    var meanings: [Meaning]?
+}
+
+struct Meaning: Decodable {
+    var text: String
+}
+
+struct Phrase: Decodable {
+    var text: String
 }

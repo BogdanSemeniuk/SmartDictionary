@@ -9,7 +9,7 @@
 import Foundation
 
 struct APIConstants {
-    static let baseURL = "https://glosbe.com/"
+    static let baseURL = "https://glosbe.com/gapi/translate"
 }
 
 enum APIParameterKey: String {

@@ -11,6 +11,7 @@
 		434ED98D208A592600A427FA /* ApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434ED98C208A592600A427FA /* ApiRequest.swift */; };
 		434ED98F208A594400A427FA /* ApiConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434ED98E208A594400A427FA /* ApiConstants.swift */; };
 		4358870B208DD94600BF2511 /* WordDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4358870A208DD94600BF2511 /* WordDetails.swift */; };
+		4358870F208E020200BF2511 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4358870E208E020200BF2511 /* ApiClient.swift */; };
 		4364E61F208637120048E9EA /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4364E61E208637120048E9EA /* SearchViewController.swift */; };
 		4364E621208637260048E9EA /* SearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4364E620208637260048E9EA /* SearchPresenter.swift */; };
 		4364E636208640F70048E9EA /* MenuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4364E635208640F70048E9EA /* MenuTests.swift */; };
@@ -43,6 +44,7 @@
 		434ED98C208A592600A427FA /* ApiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequest.swift; sourceTree = "<group>"; };
 		434ED98E208A594400A427FA /* ApiConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConstants.swift; sourceTree = "<group>"; };
 		4358870A208DD94600BF2511 /* WordDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordDetails.swift; sourceTree = "<group>"; };
+		4358870E208E020200BF2511 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 		4364E61E208637120048E9EA /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		4364E620208637260048E9EA /* SearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenter.swift; sourceTree = "<group>"; };
 		4364E6272086402E0048E9EA /* SmartDictionaryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmartDictionaryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				4396ED51208A095600452430 /* NetworkingManager.swift */,
+				4358870E208E020200BF2511 /* ApiClient.swift */,
 				434ED98C208A592600A427FA /* ApiRequest.swift */,
 				434ED98E208A594400A427FA /* ApiConstants.swift */,
 			);
@@ -395,6 +398,7 @@
 				4364E61F208637120048E9EA /* SearchViewController.swift in Sources */,
 				438117732084C0FF00BA0EB7 /* AppDelegate.swift in Sources */,
 				438117932084ECD300BA0EB7 /* Factory.swift in Sources */,
+				4358870F208E020200BF2511 /* ApiClient.swift in Sources */,
 				4381178F2084EA1E00BA0EB7 /* DependencyContainer.swift in Sources */,
 				434ED98F208A594400A427FA /* ApiConstants.swift in Sources */,
 				434ED98D208A592600A427FA /* ApiRequest.swift in Sources */,

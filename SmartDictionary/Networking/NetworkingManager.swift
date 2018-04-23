@@ -10,15 +10,21 @@ import Foundation
 import Alamofire
 
 protocol TranslateManager {
-    func translate(word: String, complition: () -> ())
+    func translate(word: String, complition: @escaping (WordDetails) -> ())
 }
 
+
+
 class NetworkingManager: TranslateManager {
-    func translate(word: String, complition: () -> ()) {
+    var apiClient: ApiClient
+    
+    init(apiClient: ApiClient) {
+        self.apiClient = apiClient
+    }
+    
+    func translate(word: String, complition: @escaping (WordDetails) -> ()) {
         let urlRequest = try! APIRequest.translate(word: word).asURLRequest()
-        Alamofire.request(urlRequest).responseJSON { (response) in
-            
-        }
+        apiClient.execute(request: urlRequest)
     }
 }
 
