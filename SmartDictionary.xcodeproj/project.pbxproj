@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		238492E79E5D33E91DA833A3 /* Pods_SmartDictionary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 540546CE7E3517F5233C2F2F /* Pods_SmartDictionary.framework */; };
+		432206F9208E39FD000CADAC /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432206F8208E39FD000CADAC /* Result.swift */; };
 		434ED98D208A592600A427FA /* ApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434ED98C208A592600A427FA /* ApiRequest.swift */; };
 		434ED98F208A594400A427FA /* ApiConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434ED98E208A594400A427FA /* ApiConstants.swift */; };
 		4358870B208DD94600BF2511 /* WordDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4358870A208DD94600BF2511 /* WordDetails.swift */; };
@@ -16,6 +17,7 @@
 		4364E621208637260048E9EA /* SearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4364E620208637260048E9EA /* SearchPresenter.swift */; };
 		4364E636208640F70048E9EA /* MenuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4364E635208640F70048E9EA /* MenuTests.swift */; };
 		4370074E2087641600136187 /* MockRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4370074D2087641600136187 /* MockRouter.swift */; };
+		43742B532090B79400710443 /* ApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43742B522090B79400710443 /* ApiResponse.swift */; };
 		438117732084C0FF00BA0EB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438117722084C0FF00BA0EB7 /* AppDelegate.swift */; };
 		438117782084C0FF00BA0EB7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 438117762084C0FF00BA0EB7 /* Main.storyboard */; };
 		4381177A2084C10100BA0EB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 438117792084C10100BA0EB7 /* Assets.xcassets */; };
@@ -41,6 +43,7 @@
 
 /* Begin PBXFileReference section */
 		3979245EE0DAD3FA7F4CC9C6 /* Pods_SmartDictionaryTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartDictionaryTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		432206F8208E39FD000CADAC /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		434ED98C208A592600A427FA /* ApiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequest.swift; sourceTree = "<group>"; };
 		434ED98E208A594400A427FA /* ApiConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConstants.swift; sourceTree = "<group>"; };
 		4358870A208DD94600BF2511 /* WordDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordDetails.swift; sourceTree = "<group>"; };
@@ -51,6 +54,7 @@
 		4364E62B2086402E0048E9EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4364E635208640F70048E9EA /* MenuTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTests.swift; sourceTree = "<group>"; };
 		4370074D2087641600136187 /* MockRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRouter.swift; sourceTree = "<group>"; };
+		43742B522090B79400710443 /* ApiResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResponse.swift; sourceTree = "<group>"; };
 		4381176F2084C0FF00BA0EB7 /* SmartDictionary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartDictionary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		438117722084C0FF00BA0EB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		438117772084C0FF00BA0EB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -95,6 +99,8 @@
 			children = (
 				4396ED51208A095600452430 /* NetworkingManager.swift */,
 				4358870E208E020200BF2511 /* ApiClient.swift */,
+				43742B522090B79400710443 /* ApiResponse.swift */,
+				432206F8208E39FD000CADAC /* Result.swift */,
 				434ED98C208A592600A427FA /* ApiRequest.swift */,
 				434ED98E208A594400A427FA /* ApiConstants.swift */,
 			);
@@ -393,7 +399,9 @@
 				4381178B2084E7BB00BA0EB7 /* Router.swift in Sources */,
 				438117952084EEC100BA0EB7 /* MenuViewController.swift in Sources */,
 				4358870B208DD94600BF2511 /* WordDetails.swift in Sources */,
+				43742B532090B79400710443 /* ApiResponse.swift in Sources */,
 				4364E621208637260048E9EA /* SearchPresenter.swift in Sources */,
+				432206F9208E39FD000CADAC /* Result.swift in Sources */,
 				4396ED52208A095600452430 /* NetworkingManager.swift in Sources */,
 				4364E61F208637120048E9EA /* SearchViewController.swift in Sources */,
 				438117732084C0FF00BA0EB7 /* AppDelegate.swift in Sources */,

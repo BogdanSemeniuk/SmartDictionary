@@ -24,7 +24,14 @@ class NetworkingManager: TranslateManager {
     
     func translate(word: String, complition: @escaping (WordDetails) -> ()) {
         let urlRequest = try! APIRequest.translate(word: word).asURLRequest()
-        apiClient.execute(request: urlRequest)
+        apiClient.execute(request: urlRequest) { (result: Result<ApiResponse<WordDetails>>)  in
+            switch result {
+            case let .success(response):
+                return
+            case let .failure(error):
+                return
+            }
+        }
     }
 }
 

@@ -8,20 +8,12 @@
 
 import Foundation
 
-struct WordDetails: Decodable {
-    var tuc: [WordDescription]
-    var phrase: String
+protocol InitializableWithData {
+    init(data: Data?) throws
 }
 
-struct WordDescription: Decodable {
-    var phrase: Phrase?
-    var meanings: [Meaning]?
-}
-
-struct Meaning: Decodable {
-    var text: String
-}
-
-struct Phrase: Decodable {
-    var text: String
+struct WordDetails: InitializableWithData {
+    init(data: Data?) throws {
+        
+    }
 }

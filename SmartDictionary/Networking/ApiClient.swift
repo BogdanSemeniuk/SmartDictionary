@@ -10,11 +10,26 @@ import Foundation
 import Alamofire
 
 protocol ApiClient {
-    func execute(request: URLRequestConvertible)
+    func execute<T>(request: URLRequest, completionHandler: @escaping (Result<ApiResponse<T>>) -> Void)
 }
 
 class ApiClientImplementation: ApiClient {
-    func execute(request: URLRequestConvertible) {
-        Alamofire.request(request)
+    func execute<T>(request: URLRequest, completionHandler: @escaping (Result<ApiResponse<T>>) -> Void) {
+        Alamofire.request(request).response { (serverResponse) in
+            guard let httpUrlResponse = serverResponse.response else {
+                completionHandler(.failure(serverResponse.error!))
+                return
+            }
+            switch httpUrlResponse.statusCode {
+            case 200...299:
+                do {
+                    let response = try ApiResponse<T>(data: serverResponse.data, httpUrlResponse: httpUrlResponse)
+                    completionHandler(.success(response))
+                } catch {
+                    completionHandler(.failure(serverResponse.error!))
+                }
+            default: completionHandler(.failure(ApiError(data: serverResponse.data, httpUrlResponse: httpUrlResponse)))
+            }
+        }
     }
 }
