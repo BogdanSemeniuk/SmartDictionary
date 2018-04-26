@@ -17,7 +17,9 @@ class ApiClientImplementation: ApiClient {
     func execute<T>(request: URLRequest, completionHandler: @escaping (Result<ApiResponse<T>>) -> Void) {
         Alamofire.request(request).response { (serverResponse) in
             guard let httpUrlResponse = serverResponse.response else {
-                completionHandler(.failure(serverResponse.error!))
+                if let error = serverResponse.error {
+                    completionHandler(.failure(error))
+                }
                 return
             }
             switch httpUrlResponse.statusCode {
@@ -26,7 +28,9 @@ class ApiClientImplementation: ApiClient {
                     let response = try ApiResponse<T>(data: serverResponse.data, httpUrlResponse: httpUrlResponse)
                     completionHandler(.success(response))
                 } catch {
-                    completionHandler(.failure(serverResponse.error!))
+                    if let error = serverResponse.error {
+                        completionHandler(.failure(error))
+                    }
                 }
             default: completionHandler(.failure(ApiError(data: serverResponse.data, httpUrlResponse: httpUrlResponse)))
             }

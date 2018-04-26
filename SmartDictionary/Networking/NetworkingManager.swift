@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 
 protocol TranslateManager {
-    func translate(word: String, complition: @escaping (WordDetails) -> ())
+    func translate(word: String, complition: @escaping (Result<WordDetails>) -> ())
 }
 
 
@@ -22,7 +22,7 @@ class NetworkingManager: TranslateManager {
         self.apiClient = apiClient
     }
     
-    func translate(word: String, complition: @escaping (WordDetails) -> ()) {
+    func translate(word: String, complition: @escaping (Result<WordDetails>) -> ()) {
         let urlRequest = try! APIRequest.translate(word: word).asURLRequest()
         apiClient.execute(request: urlRequest) { (result: Result<ApiResponse<WordDetails>>)  in
             switch result {

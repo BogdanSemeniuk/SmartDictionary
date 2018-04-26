@@ -9,6 +9,7 @@
 import Foundation
 
 protocol SearchViewPresenter {
+    func searchViewDidLoad()
     func searchButtonPressed(text: String)
 }
 
@@ -30,7 +31,12 @@ class SearchPresenter: SearchViewPresenter {
     
     func searchButtonPressed(text: String) {
         networkingManager.translate(word: text) { wordDetails in
-            
         }
+    }
+    
+    // MARK: - View customization
+    
+    func searchViewDidLoad() {
+        view?.setupView()
     }
 }

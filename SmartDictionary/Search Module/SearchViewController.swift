@@ -9,6 +9,7 @@
 import UIKit
 
 protocol SearchView: class {
+    func setupView()
 }
 
 class SearchViewController: UIViewController, SearchView {
@@ -18,7 +19,18 @@ class SearchViewController: UIViewController, SearchView {
     @IBOutlet weak var searchBar: UISearchBar!
     var presenter: SearchViewPresenter!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        presenter.searchViewDidLoad()
+    }
+    
     deinit { print("SearchViewController deinit") }
+    
+    // MARK: - View customization
+    
+    func setupView() {
+        searchBar.autocapitalizationType = .none
+    }
 }
 
 // MARK: - UITableViewDelegate and UITableViewDataSource
