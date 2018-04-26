@@ -8,18 +8,7 @@
 
 import Foundation
 
-struct ApiResponse<T: InitializableWithData> {
-    let entity: T
+struct ApiResponse {
     let httpUrlResponse: HTTPURLResponse
     let data: Data?
-    
-    init(data: Data?, httpUrlResponse: HTTPURLResponse) throws {
-        do {
-            self.entity = try T(data: data)
-            self.httpUrlResponse = httpUrlResponse
-            self.data = data
-        } catch {
-            throw ParseError()
-        }
-    }
 }

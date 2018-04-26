@@ -18,6 +18,7 @@ class SearchPresenter: SearchViewPresenter {
     
     private weak var view: SearchView?
     private var networkingManager: TranslateManager
+    private var wordDetails: WordDetails?
     
     // MARK: - Initializer
     
@@ -30,9 +31,20 @@ class SearchPresenter: SearchViewPresenter {
     // MARK: - Action handling
     
     func searchButtonPressed(text: String) {
-        networkingManager.translate(word: text) { wordDetails in
+        networkingManager.translate(word: text) { [weak self] result in
+            switch result{
+            case .success(let wordDetails):
+                self?.wordDetails = wordDetails
+            case .failure(let error):
+                print(error)
+                
+            }
         }
     }
+    
+    // MARK: - Error handling
+    
+    
     
     // MARK: - View customization
     

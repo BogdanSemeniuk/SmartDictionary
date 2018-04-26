@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		238492E79E5D33E91DA833A3 /* Pods_SmartDictionary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 540546CE7E3517F5233C2F2F /* Pods_SmartDictionary.framework */; };
+		4321EAE52092310D00D9A676 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4321EAE42092310D00D9A676 /* Errors.swift */; };
 		432206F9208E39FD000CADAC /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432206F8208E39FD000CADAC /* Result.swift */; };
 		434ED98D208A592600A427FA /* ApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434ED98C208A592600A427FA /* ApiRequest.swift */; };
 		434ED98F208A594400A427FA /* ApiConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434ED98E208A594400A427FA /* ApiConstants.swift */; };
@@ -43,6 +44,7 @@
 
 /* Begin PBXFileReference section */
 		3979245EE0DAD3FA7F4CC9C6 /* Pods_SmartDictionaryTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartDictionaryTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4321EAE42092310D00D9A676 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		432206F8208E39FD000CADAC /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		434ED98C208A592600A427FA /* ApiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequest.swift; sourceTree = "<group>"; };
 		434ED98E208A594400A427FA /* ApiConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConstants.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 				4358870E208E020200BF2511 /* ApiClient.swift */,
 				43742B522090B79400710443 /* ApiResponse.swift */,
 				432206F8208E39FD000CADAC /* Result.swift */,
+				4321EAE42092310D00D9A676 /* Errors.swift */,
 				434ED98C208A592600A427FA /* ApiRequest.swift */,
 				434ED98E208A594400A427FA /* ApiConstants.swift */,
 			);
@@ -400,6 +403,7 @@
 				438117952084EEC100BA0EB7 /* MenuViewController.swift in Sources */,
 				4358870B208DD94600BF2511 /* WordDetails.swift in Sources */,
 				43742B532090B79400710443 /* ApiResponse.swift in Sources */,
+				4321EAE52092310D00D9A676 /* Errors.swift in Sources */,
 				4364E621208637260048E9EA /* SearchPresenter.swift in Sources */,
 				432206F9208E39FD000CADAC /* Result.swift in Sources */,
 				4396ED52208A095600452430 /* NetworkingManager.swift in Sources */,

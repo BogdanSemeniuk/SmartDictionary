@@ -13,8 +13,6 @@ protocol TranslateManager {
     func translate(word: String, complition: @escaping (Result<WordDetails>) -> ())
 }
 
-
-
 class NetworkingManager: TranslateManager {
     var apiClient: ApiClient
     
@@ -24,12 +22,19 @@ class NetworkingManager: TranslateManager {
     
     func translate(word: String, complition: @escaping (Result<WordDetails>) -> ()) {
         let urlRequest = try! APIRequest.translate(word: word).asURLRequest()
-        apiClient.execute(request: urlRequest) { (result: Result<ApiResponse<WordDetails>>)  in
+        apiClient.execute(request: urlRequest) { (result: Result<ApiResponse>)  in
             switch result {
-            case let .success(response):
-                return
-            case let .failure(error):
-                return
+            case .success(let response):
+                if let responseData = response.data {
+                    do {
+                        let wordDetails = try JSONDecoder().decode(WordDetails.self, from: responseData)
+                        complition(.success(wordDetails))
+                    } catch {
+                        complition(.failure(ParseError()))
+                    }
+                }
+            case .failure(let error):
+                complition(.failure(error))
             }
         }
     }

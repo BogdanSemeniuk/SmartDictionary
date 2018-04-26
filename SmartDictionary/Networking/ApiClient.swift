@@ -10,11 +10,11 @@ import Foundation
 import Alamofire
 
 protocol ApiClient {
-    func execute<T>(request: URLRequest, completionHandler: @escaping (Result<ApiResponse<T>>) -> Void)
+    func execute(request: URLRequest, completionHandler: @escaping (Result<ApiResponse>) -> Void)
 }
 
 class ApiClientImplementation: ApiClient {
-    func execute<T>(request: URLRequest, completionHandler: @escaping (Result<ApiResponse<T>>) -> Void) {
+    func execute(request: URLRequest, completionHandler: @escaping (Result<ApiResponse>) -> Void) {
         Alamofire.request(request).response { (serverResponse) in
             guard let httpUrlResponse = serverResponse.response else {
                 if let error = serverResponse.error {
@@ -24,14 +24,8 @@ class ApiClientImplementation: ApiClient {
             }
             switch httpUrlResponse.statusCode {
             case 200...299:
-                do {
-                    let response = try ApiResponse<T>(data: serverResponse.data, httpUrlResponse: httpUrlResponse)
-                    completionHandler(.success(response))
-                } catch {
-                    if let error = serverResponse.error {
-                        completionHandler(.failure(error))
-                    }
-                }
+                let response = ApiResponse(httpUrlResponse: httpUrlResponse, data: serverResponse.data)
+                completionHandler(.success(response))
             default: completionHandler(.failure(ApiError(data: serverResponse.data, httpUrlResponse: httpUrlResponse)))
             }
         }
