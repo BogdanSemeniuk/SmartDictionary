@@ -36,15 +36,16 @@ class SearchPresenter: SearchViewPresenter {
             case .success(let wordDetails):
                 self?.wordDetails = wordDetails
             case .failure(let error):
-                print(error)
-                
+                self?.handleError(error)
             }
         }
     }
     
     // MARK: - Error handling
     
-    
+    private func handleError(_ error: Error) {
+        view?.showErrorMessage(message: error.localizedDescription)
+    }
     
     // MARK: - View customization
     

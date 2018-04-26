@@ -8,11 +8,7 @@
 
 import Foundation
 
-protocol ErrorDescription {
-    var localizedDescription: String { get }
-}
-
-struct NetworkRequestError: Error, ErrorDescription {
+struct NetworkRequestError: Error {
     let error: Error?
     
     var localizedDescription: String {
@@ -20,12 +16,12 @@ struct NetworkRequestError: Error, ErrorDescription {
     }
 }
 
-struct ParseError: Error, ErrorDescription {
+struct ParseError: Error {
     var statusCode = 600
     var localizedDescription = "A parsing error occured"
 }
 
-struct ApiError: Error, ErrorDescription {
+struct ApiError: Error {
     let data: Data?
     let httpUrlResponse: HTTPURLResponse
     var localizedDescription: String {
