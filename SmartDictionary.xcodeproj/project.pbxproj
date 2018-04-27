@@ -17,6 +17,7 @@
 		4364E61F208637120048E9EA /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4364E61E208637120048E9EA /* SearchViewController.swift */; };
 		4364E621208637260048E9EA /* SearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4364E620208637260048E9EA /* SearchPresenter.swift */; };
 		4364E636208640F70048E9EA /* MenuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4364E635208640F70048E9EA /* MenuTests.swift */; };
+		43689E4C2093807900F74E49 /* MeaningTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43689E4B2093807900F74E49 /* MeaningTableViewCell.swift */; };
 		4370074E2087641600136187 /* MockRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4370074D2087641600136187 /* MockRouter.swift */; };
 		43742B532090B79400710443 /* ApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43742B522090B79400710443 /* ApiResponse.swift */; };
 		438117732084C0FF00BA0EB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438117722084C0FF00BA0EB7 /* AppDelegate.swift */; };
@@ -55,6 +56,7 @@
 		4364E6272086402E0048E9EA /* SmartDictionaryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmartDictionaryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4364E62B2086402E0048E9EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4364E635208640F70048E9EA /* MenuTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTests.swift; sourceTree = "<group>"; };
+		43689E4B2093807900F74E49 /* MeaningTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeaningTableViewCell.swift; sourceTree = "<group>"; };
 		4370074D2087641600136187 /* MockRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRouter.swift; sourceTree = "<group>"; };
 		43742B522090B79400710443 /* ApiResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResponse.swift; sourceTree = "<group>"; };
 		4381176F2084C0FF00BA0EB7 /* SmartDictionary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartDictionary.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -132,6 +134,7 @@
 			children = (
 				4364E61E208637120048E9EA /* SearchViewController.swift */,
 				4364E620208637260048E9EA /* SearchPresenter.swift */,
+				43689E4B2093807900F74E49 /* MeaningTableViewCell.swift */,
 			);
 			path = "Search Module";
 			sourceTree = "<group>";
@@ -415,6 +418,7 @@
 				434ED98F208A594400A427FA /* ApiConstants.swift in Sources */,
 				434ED98D208A592600A427FA /* ApiRequest.swift in Sources */,
 				438117972084EFA500BA0EB7 /* MenuPresenter.swift in Sources */,
+				43689E4C2093807900F74E49 /* MeaningTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

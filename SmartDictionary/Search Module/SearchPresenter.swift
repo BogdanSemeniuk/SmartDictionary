@@ -11,14 +11,25 @@ import Foundation
 protocol SearchViewPresenter {
     func searchViewDidLoad()
     func searchButtonPressed(text: String)
+    func configure(cell: MeaningCellView, forRow row: Int)
+    var numberOfMeanings: Int { get }
+}
+
+protocol MeaningCellView {
+    func display(meaning: String?)
+    func display(translation: String?)
 }
 
 class SearchPresenter: SearchViewPresenter {
+    
     // MARK: - Properties
     
     private weak var view: SearchView?
     private var networkingManager: TranslateManager
     private var wordDetails: WordDetails?
+    var numberOfMeanings: Int {
+        return wordDetails?.tuc.count ?? 0
+    }
     
     // MARK: - Initializer
     
@@ -35,6 +46,7 @@ class SearchPresenter: SearchViewPresenter {
             switch result{
             case .success(let wordDetails):
                 self?.wordDetails = wordDetails
+                self?.view?.updateView()
             case .failure(let error):
                 self?.handleError(error)
             }
@@ -51,5 +63,13 @@ class SearchPresenter: SearchViewPresenter {
     
     func searchViewDidLoad() {
         view?.setupView()
+    }
+    
+    func configure(cell: MeaningCellView, forRow row: Int) {
+        guard let wordParts = wordDetails?.tuc else { return }
+        let wordPart = wordParts[row]
+        cell.display(translation: wordPart.phrase?.text)
+        guard let meaning = wordPart.meanings?.first else { cell.display(meaning: nil); return }
+        cell.display(meaning: meaning.text)
     }
 }

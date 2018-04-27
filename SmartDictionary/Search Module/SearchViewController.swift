@@ -10,6 +10,7 @@ import UIKit
 
 protocol SearchView: class {
     func setupView()
+    func updateView()
     func showErrorMessage(message: String)
 }
 
@@ -19,6 +20,7 @@ class SearchViewController: UIViewController, SearchView {
     
     @IBOutlet weak var searchBar: UISearchBar!
     var presenter: SearchViewPresenter!
+    @IBOutlet weak var meaningsTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,13 +29,15 @@ class SearchViewController: UIViewController, SearchView {
     
     deinit { print("SearchViewController deinit") }
     
-    // MARK: - View customization
+    // MARK: - View
     
     func setupView() {
         searchBar.autocapitalizationType = .none
     }
     
-    // MARK: - Error view
+    func updateView() {
+        meaningsTableView.reloadData()
+    }
     
     func showErrorMessage(message: String) {
         let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
@@ -46,11 +50,13 @@ class SearchViewController: UIViewController, SearchView {
 
 extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return presenter.numberOfMeanings
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MeaningTableViewCell", for: indexPath) as! MeaningTableViewCell
+        presenter.configure(cell: cell, forRow: indexPath.row)
+        return cell
     }
 }
 

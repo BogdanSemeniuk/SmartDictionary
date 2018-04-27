@@ -177,6 +177,45 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iBY-3k-lEW">
                                 <rect key="frame" x="0.0" y="96" width="320" height="419"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MeaningTableViewCell" rowHeight="100" id="vnS-m9-lUI" customClass="MeaningTableViewCell" customModule="SmartDictionary" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vnS-m9-lUI" id="TrS-o3-a7D">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="99.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="2i3-hS-Q4S">
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="99.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meaning" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7sV-HP-awM">
+                                                            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Translation " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KcB-i1-h1Z">
+                                                            <rect key="frame" x="0.0" y="50" width="320" height="49.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="2i3-hS-Q4S" firstAttribute="top" secondItem="TrS-o3-a7D" secondAttribute="top" id="7F6-hj-I5D"/>
+                                                <constraint firstItem="2i3-hS-Q4S" firstAttribute="leading" secondItem="TrS-o3-a7D" secondAttribute="leading" id="B11-U8-ZMu"/>
+                                                <constraint firstAttribute="bottom" secondItem="2i3-hS-Q4S" secondAttribute="bottom" id="LZv-tU-xjq"/>
+                                                <constraint firstAttribute="trailing" secondItem="2i3-hS-Q4S" secondAttribute="trailing" id="XHK-Pg-dnV"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="meaningLabel" destination="7sV-HP-awM" id="5Pq-mk-rm3"/>
+                                            <outlet property="translationLabel" destination="KcB-i1-h1Z" id="dPc-ZB-1CP"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="Jsi-lb-IEE" id="n4X-eR-FM5"/>
                                     <outlet property="delegate" destination="Jsi-lb-IEE" id="sGJ-Q3-Ud4"/>
@@ -205,6 +244,7 @@
                         <viewLayoutGuide key="safeArea" id="DOq-cq-FWt"/>
                     </view>
                     <connections>
+                        <outlet property="meaningsTableView" destination="iBY-3k-lEW" id="Q82-lI-jgz"/>
                         <outlet property="searchBar" destination="4SF-6y-tmu" id="rAr-lG-QIR"/>
                     </connections>
                 </viewController>
