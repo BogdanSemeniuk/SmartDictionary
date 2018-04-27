@@ -8,23 +8,29 @@
 
 import Foundation
 
-struct NetworkRequestError: Error {
+typealias ErrorDescription = Description & Error
+
+protocol Description {
+    var description: String { get }
+}
+
+struct NetworkRequestError: ErrorDescription {
     let error: Error?
     
-    var localizedDescription: String {
+    var description: String {
         return error?.localizedDescription ?? "Network request error - no other information"
     }
 }
 
-struct ParseError: Error {
+struct ParseError: ErrorDescription {
     var statusCode = 600
-    var localizedDescription = "A parsing error occured"
+    var description = "A parsing error occured"
 }
 
-struct ApiError: Error {
+struct ApiError: ErrorDescription {
     let data: Data?
     let httpUrlResponse: HTTPURLResponse
-    var localizedDescription: String {
+    var description: String {
         let informationalMessage = "Status code: \(httpUrlResponse.statusCode)."
         switch httpUrlResponse.statusCode {
         case 100...199: return informationalMessage + " Informational response"
@@ -35,3 +41,4 @@ struct ApiError: Error {
         }
     }
 }
+

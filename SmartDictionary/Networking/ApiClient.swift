@@ -18,7 +18,7 @@ class ApiClientImplementation: ApiClient {
         Alamofire.request(request).response { (serverResponse) in
             guard let httpUrlResponse = serverResponse.response else {
                 if let error = serverResponse.error {
-                    completionHandler(.failure(error))
+                    completionHandler(.failure(NetworkRequestError(error: error)))
                 }
                 return
             }

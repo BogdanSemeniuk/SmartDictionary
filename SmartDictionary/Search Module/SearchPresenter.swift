@@ -43,8 +43,8 @@ class SearchPresenter: SearchViewPresenter {
     
     // MARK: - Error handling
     
-    private func handleError(_ error: Error) {
-        view?.showErrorMessage(message: error.localizedDescription)
+    private func handleError(_ error: ErrorDescription) {
+        view?.showErrorMessage(message: error.description)
     }
     
     // MARK: - View customization

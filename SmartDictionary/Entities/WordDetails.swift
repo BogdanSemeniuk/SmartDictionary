@@ -9,7 +9,7 @@
 import Foundation
 
 struct WordDetails: Decodable {
-    var tuc: [WordParts]
+    var tuca: [WordParts]
 }
 
 struct WordParts: Decodable {
