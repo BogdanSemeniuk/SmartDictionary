@@ -12,13 +12,10 @@ class MeaningTableViewCell: UITableViewCell, MeaningCellView {
     @IBOutlet weak var meaningLabel: UILabel!
     @IBOutlet weak var translationLabel: UILabel!
     
-    func display(meaning: String?) {
-        guard let meaning = meaning else { meaningLabel.text = nil; return}
+    func display(meaning: String?, translation: String?) {
+        meaningLabel.isHidden = (meaning == nil)
+        translationLabel.isHidden = (translation == nil)
         meaningLabel.text = meaning
-    }
-    
-    func display(translation: String?) {
-        guard let translation = translation else { translationLabel.text = nil; return}
         translationLabel.text = translation
     }
 }

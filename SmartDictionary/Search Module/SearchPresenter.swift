@@ -16,8 +16,7 @@ protocol SearchViewPresenter {
 }
 
 protocol MeaningCellView {
-    func display(meaning: String?)
-    func display(translation: String?)
+    func display(meaning: String?, translation: String?)
 }
 
 class SearchPresenter: SearchViewPresenter {
@@ -68,8 +67,10 @@ class SearchPresenter: SearchViewPresenter {
     func configure(cell: MeaningCellView, forRow row: Int) {
         guard let wordParts = wordDetails?.tuc else { return }
         let wordPart = wordParts[row]
-        cell.display(translation: wordPart.phrase?.text)
-        guard let meaning = wordPart.meanings?.first else { cell.display(meaning: nil); return }
-        cell.display(meaning: meaning.text)
+        var meaning = wordPart.meanings?.first?.text.stripHTML()
+        if meaning != nil { meaning = "Meaning: " +  meaning!}
+        var translation = wordPart.phrase?.text.stripHTML()
+        if translation != nil { translation = "Translation: " +  translation!}
+        cell.display(meaning: meaning, translation: translation)
     }
 }

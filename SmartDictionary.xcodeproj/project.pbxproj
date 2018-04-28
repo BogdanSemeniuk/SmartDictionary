@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		238492E79E5D33E91DA833A3 /* Pods_SmartDictionary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 540546CE7E3517F5233C2F2F /* Pods_SmartDictionary.framework */; };
+		431EE60A2094BC600073B2AE /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431EE6092094BC600073B2AE /* StringExtension.swift */; };
 		4321EAE52092310D00D9A676 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4321EAE42092310D00D9A676 /* Errors.swift */; };
 		432206F9208E39FD000CADAC /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432206F8208E39FD000CADAC /* Result.swift */; };
 		434ED98D208A592600A427FA /* ApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434ED98C208A592600A427FA /* ApiRequest.swift */; };
@@ -45,6 +46,7 @@
 
 /* Begin PBXFileReference section */
 		3979245EE0DAD3FA7F4CC9C6 /* Pods_SmartDictionaryTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartDictionaryTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		431EE6092094BC600073B2AE /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		4321EAE42092310D00D9A676 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		432206F8208E39FD000CADAC /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		434ED98C208A592600A427FA /* ApiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequest.swift; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				438117722084C0FF00BA0EB7 /* AppDelegate.swift */,
+				431EE6092094BC600073B2AE /* StringExtension.swift */,
 				4358870D208DD9A700BF2511 /* Entities */,
 				434ED98B208A4B1800A427FA /* Networking */,
 				438117902084EB2F00BA0EB7 /* Navigation */,
@@ -416,6 +419,7 @@
 				4358870F208E020200BF2511 /* ApiClient.swift in Sources */,
 				4381178F2084EA1E00BA0EB7 /* DependencyContainer.swift in Sources */,
 				434ED98F208A594400A427FA /* ApiConstants.swift in Sources */,
+				431EE60A2094BC600073B2AE /* StringExtension.swift in Sources */,
 				434ED98D208A592600A427FA /* ApiRequest.swift in Sources */,
 				438117972084EFA500BA0EB7 /* MenuPresenter.swift in Sources */,
 				43689E4C2093807900F74E49 /* MeaningTableViewCell.swift in Sources */,

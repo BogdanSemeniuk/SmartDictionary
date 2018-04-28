@@ -33,6 +33,8 @@ class SearchViewController: UIViewController, SearchView {
     
     func setupView() {
         searchBar.autocapitalizationType = .none
+        meaningsTableView.rowHeight = UITableViewAutomaticDimension
+        meaningsTableView.estimatedRowHeight = 140
     }
     
     func updateView() {
