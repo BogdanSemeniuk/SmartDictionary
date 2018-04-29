@@ -15,12 +15,8 @@ protocol SearchViewPresenter {
     var numberOfMeanings: Int { get }
 }
 
-protocol MeaningCellView {
-    func display(meaning: String?, translation: String?)
-}
-
 class SearchPresenter: SearchViewPresenter {
-    
+
     // MARK: - Properties
     
     private weak var view: SearchView?
@@ -67,10 +63,8 @@ class SearchPresenter: SearchViewPresenter {
     func configure(cell: MeaningCellView, forRow row: Int) {
         guard let wordParts = wordDetails?.tuc else { return }
         let wordPart = wordParts[row]
-        var meaning = wordPart.meanings?.first?.text.stripHTML()
-        if meaning != nil { meaning = "Meaning: " +  meaning!}
-        var translation = wordPart.phrase?.text.stripHTML()
-        if translation != nil { translation = "Translation: " +  translation!}
+        let meaning = wordPart.meanings?.first?.text.stripHTML()
+        let translation = wordPart.phrase?.text.stripHTML()
         cell.display(meaning: meaning, translation: translation)
     }
 }

@@ -23,5 +23,6 @@ struct Phrase: Decodable {
 
 struct Meaning: Decodable {
     var text: String
+    var language: String
 }
 
