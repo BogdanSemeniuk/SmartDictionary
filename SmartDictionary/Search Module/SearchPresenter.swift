@@ -63,7 +63,7 @@ class SearchPresenter: SearchViewPresenter {
     func configure(cell: MeaningCellView, forRow row: Int) {
         guard let wordParts = wordDetails?.tuc else { return }
         let wordPart = wordParts[row]
-        let meaning = wordPart.meanings?.first?.text.stripHTML()
+        let meaning = wordPart.meanings?.first
         let translation = wordPart.phrase?.text.stripHTML()
         cell.display(meaning: meaning, translation: translation)
     }

@@ -9,7 +9,7 @@
 import UIKit
 
 protocol MeaningCellView {
-    func display(meaning: String?, translation: String?)
+    func display(meaning: Meaning?, translation: String?)
 }
 
 class MeaningTableViewCell: UITableViewCell, MeaningCellView {
@@ -18,19 +18,20 @@ class MeaningTableViewCell: UITableViewCell, MeaningCellView {
     @IBOutlet weak var translationLabel: UILabel!
     private let fontSize: CGFloat = 20.0
     
-    func display(meaning: String?, translation: String?) {
+    func display(meaning: Meaning?, translation: String?) {
         meaningLabel.isHidden = (meaning == nil)
         translationLabel.isHidden = (translation == nil)
         addAttributesToMeaning(meaning: meaning)
         addAttributesToTranslation(translation: translation)
     }
     
-    private func addAttributesToMeaning(meaning: String?) {
+    private func addAttributesToMeaning(meaning: Meaning?) {
         guard let meaning = meaning else { return }
+        let meaningText = meaning.text.stripHTML()
         let attributesForMeaning = [NSAttributedStringKey.font: UIFont(name: "AvenirNext-Medium", size: fontSize)!]
-        let attrMeaningString = NSAttributedString(string: meaning, attributes: attributesForMeaning)
-        
-        let beginningOfString = "Meaning: "
+        let attrMeaningString = NSAttributedString(string: meaningText, attributes: attributesForMeaning)
+        let country = (meaning.language == "ru") ? "🇷🇺" : "🇬🇧"
+        let beginningOfString = "Meaning(\(country)): "
         let attributesForBeginning = [NSAttributedStringKey.font: UIFont(name: "AvenirNext-Bold", size: fontSize)!]
         let attrString = NSMutableAttributedString(string: beginningOfString, attributes: attributesForBeginning)
         attrString.append(attrMeaningString)
