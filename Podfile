@@ -7,9 +7,7 @@ target 'SmartDictionary' do
 
   # Pods for SmartDictionary
 pod 'Alamofire', '~> 4.7'
-
-
-
+pod 'RealmSwift'
 
 
 
