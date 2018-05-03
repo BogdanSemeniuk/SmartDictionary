@@ -10,6 +10,7 @@ import Foundation
 
 struct WordDetails: Decodable {
     var tuc: [WordParts]
+    var phrase: String
 }
 
 struct WordParts: Decodable {
@@ -24,5 +25,10 @@ struct Phrase: Decodable {
 struct Meaning: Decodable {
     var text: String
     var language: String
+}
+
+struct Word {
+    var value: String
+    var translation: String
 }
 

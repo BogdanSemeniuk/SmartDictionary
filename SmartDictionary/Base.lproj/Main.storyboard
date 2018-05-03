@@ -229,6 +229,9 @@
                                 <state key="normal" title="Add to dictionary">
                                     <color key="titleColor" red="0.0" green="0.56284224989999998" blue="0.31881666180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="addToDictionaryTapped:" destination="Jsi-lb-IEE" eventType="touchUpInside" id="xVd-Gs-W4b"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

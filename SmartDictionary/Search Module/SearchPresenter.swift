@@ -13,6 +13,7 @@ protocol SearchViewPresenter {
     func searchButtonPressed(text: String)
     func configure(cell: MeaningCellView, forRow row: Int)
     var numberOfMeanings: Int { get }
+    func addToDictionaryWasTapped()
 }
 
 class SearchPresenter: SearchViewPresenter {
@@ -22,6 +23,10 @@ class SearchPresenter: SearchViewPresenter {
     private weak var view: SearchView?
     private var networkingManager: TranslateManager
     private var wordDetails: WordDetails?
+    private var word: Word? {
+        guard let value = wordDetails?.phrase, let translation = wordDetails?.tuc.first?.phrase?.text else { return nil }
+        return Word(value: value, translation: translation)
+    }
     var numberOfMeanings: Int {
         return wordDetails?.tuc.count ?? 0
     }
@@ -46,6 +51,10 @@ class SearchPresenter: SearchViewPresenter {
                 self?.handleError(error)
             }
         }
+    }
+    
+    func addToDictionaryWasTapped() {
+        print("addToDictionaryWasTapped")
     }
     
     // MARK: - Error handling

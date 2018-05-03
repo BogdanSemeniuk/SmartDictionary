@@ -46,6 +46,12 @@ class SearchViewController: UIViewController, SearchView {
         alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: nil))
         present(alert, animated: true, completion: nil)
     }
+    
+    // MARK: - Actions
+    
+    @IBAction func addToDictionaryTapped(_ sender: UIButton) {
+        presenter.addToDictionaryWasTapped()
+    }
 }
 
 // MARK: - UITableViewDelegate and UITableViewDataSource
