@@ -16,6 +16,10 @@ protocol SearchModulFactory {
     func makeSearchModule() -> UIViewController
 }
 
+protocol DictionaryModulFactory {
+    func makeDictionaryModule() -> UIViewController
+}
+
 extension DependencyContainer: MenuModulFactory {
     func makeMenuModule(router: Router) -> UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -31,6 +35,16 @@ extension DependencyContainer: SearchModulFactory {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "SearchViewController") as! SearchViewController
         let presenter = SearchPresenter(view: vc, networkingManager: self.networkingManager, storage: self.storage)
+        vc.presenter = presenter
+        return vc
+    }
+}
+
+extension DependencyContainer: DictionaryModulFactory {
+    func makeDictionaryModule() -> UIViewController {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "DictionaryTableViewController") as! DictionaryTableViewController
+        let presenter = DictionaryPresenter(view: vc, storage: self.storage)
         vc.presenter = presenter
         return vc
     }

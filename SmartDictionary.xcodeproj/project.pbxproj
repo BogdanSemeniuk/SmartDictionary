@@ -11,6 +11,8 @@
 		431EE60A2094BC600073B2AE /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431EE6092094BC600073B2AE /* StringExtension.swift */; };
 		4321EAE52092310D00D9A676 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4321EAE42092310D00D9A676 /* Errors.swift */; };
 		432206F9208E39FD000CADAC /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432206F8208E39FD000CADAC /* Result.swift */; };
+		4323036420A2183700EF5194 /* DictionaryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4323036320A2183700EF5194 /* DictionaryTableViewController.swift */; };
+		4323036620A218DD00EF5194 /* DictionaryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4323036520A218DD00EF5194 /* DictionaryPresenter.swift */; };
 		4329B913209B5B35001D5E6D /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4329B912209B5B35001D5E6D /* Word.swift */; };
 		434ED98D208A592600A427FA /* ApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434ED98C208A592600A427FA /* ApiRequest.swift */; };
 		434ED98F208A594400A427FA /* ApiConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434ED98E208A594400A427FA /* ApiConstants.swift */; };
@@ -52,6 +54,8 @@
 		431EE6092094BC600073B2AE /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		4321EAE42092310D00D9A676 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		432206F8208E39FD000CADAC /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		4323036320A2183700EF5194 /* DictionaryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryTableViewController.swift; sourceTree = "<group>"; };
+		4323036520A218DD00EF5194 /* DictionaryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryPresenter.swift; sourceTree = "<group>"; };
 		4329B912209B5B35001D5E6D /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
 		434ED98C208A592600A427FA /* ApiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequest.swift; sourceTree = "<group>"; };
 		434ED98E208A594400A427FA /* ApiConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConstants.swift; sourceTree = "<group>"; };
@@ -106,6 +110,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4323036220A217E500EF5194 /* Dictionary Module */ = {
+			isa = PBXGroup;
+			children = (
+				4323036320A2183700EF5194 /* DictionaryTableViewController.swift */,
+				4323036520A218DD00EF5194 /* DictionaryPresenter.swift */,
+			);
+			path = "Dictionary Module";
+			sourceTree = "<group>";
+		};
 		4329B914209B5FB6001D5E6D /* Stored Objects */ = {
 			isa = PBXGroup;
 			children = (
@@ -198,6 +211,7 @@
 				438117902084EB2F00BA0EB7 /* Navigation */,
 				438117912084EC4800BA0EB7 /* Dependency Container */,
 				438117762084C0FF00BA0EB7 /* Main.storyboard */,
+				4323036220A217E500EF5194 /* Dictionary Module */,
 				4364E622208637350048E9EA /* Search Module */,
 				4364E61D208636110048E9EA /* Menu Module */,
 				4381177E2084C10100BA0EB7 /* Info.plist */,
@@ -431,6 +445,7 @@
 				4381178B2084E7BB00BA0EB7 /* Router.swift in Sources */,
 				438117952084EEC100BA0EB7 /* MenuViewController.swift in Sources */,
 				4358870B208DD94600BF2511 /* WordDetails.swift in Sources */,
+				4323036420A2183700EF5194 /* DictionaryTableViewController.swift in Sources */,
 				43742B532090B79400710443 /* ApiResponse.swift in Sources */,
 				4321EAE52092310D00D9A676 /* Errors.swift in Sources */,
 				4364E621208637260048E9EA /* SearchPresenter.swift in Sources */,
@@ -444,6 +459,7 @@
 				434ED98F208A594400A427FA /* ApiConstants.swift in Sources */,
 				431EE60A2094BC600073B2AE /* StringExtension.swift in Sources */,
 				434ED98D208A592600A427FA /* ApiRequest.swift in Sources */,
+				4323036620A218DD00EF5194 /* DictionaryPresenter.swift in Sources */,
 				438117972084EFA500BA0EB7 /* MenuPresenter.swift in Sources */,
 				43689E4C2093807900F74E49 /* MeaningTableViewCell.swift in Sources */,
 				4329B913209B5B35001D5E6D /* Word.swift in Sources */,

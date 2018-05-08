@@ -36,6 +36,7 @@ class Router: Navigator {
         switch destination {
         case .menu: return dependencyContainer.makeMenuModule(router: self)
         case .search: return dependencyContainer.makeSearchModule()
+        case .dictionary: return dependencyContainer.makeDictionaryModule()
         }
     }
 }
@@ -46,6 +47,7 @@ extension Router {
     enum Destination {
         case menu
         case search
+        case dictionary
     }
 }
 

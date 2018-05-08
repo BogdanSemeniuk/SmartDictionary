@@ -44,7 +44,7 @@ class MenuPresenter: MenuViewPresenter {
     }
     
     func dictionaryButtonWasTapped() {
-        
+        router.navigate(to: .dictionary)
     }
     
     func trainingButtonWasTapped() {

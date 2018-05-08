@@ -37,7 +37,7 @@ class MenuViewController: UIViewController, MenuView {
         presenter.searchButtonWasTapped()
     }
     @IBAction func dictionaryButtonTapped(_ sender: UIButton) {
-        
+        presenter.dictionaryButtonWasTapped()
     }
     @IBAction func trainingButtonTapped(_ sender: UIButton) {
         
