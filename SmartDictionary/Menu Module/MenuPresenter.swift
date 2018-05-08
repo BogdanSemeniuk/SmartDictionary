@@ -24,7 +24,7 @@ class MenuPresenter: MenuViewPresenter {
     
     // MARK: - Initializer
     
-    init(view: MenuView, router: Router) {
+    init(view: MenuView?, router: Router) {
         self.view = view
         self.router = router
     }

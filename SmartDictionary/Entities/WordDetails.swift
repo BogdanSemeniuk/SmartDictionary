@@ -27,8 +27,4 @@ struct Meaning: Decodable {
     var language: String
 }
 
-struct Word {
-    var value: String
-    var translation: String
-}
 

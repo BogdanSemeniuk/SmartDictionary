@@ -7,12 +7,13 @@
 //
 
 import Foundation
+import RealmSwift
 
 protocol SearchViewPresenter {
     func searchViewDidLoad()
     func searchButtonPressed(text: String)
     func configure(cell: MeaningCellView, forRow row: Int)
-    var numberOfMeanings: Int { get }
+    var numberOfItems: Int { get }
     func addToDictionaryWasTapped()
 }
 
@@ -22,20 +23,22 @@ class SearchPresenter: SearchViewPresenter {
     
     private weak var view: SearchView?
     private var networkingManager: TranslateManager
+    private var storage: Realm
     private var wordDetails: WordDetails?
     private var word: Word? {
         guard let value = wordDetails?.phrase, let translation = wordDetails?.tuc.first?.phrase?.text else { return nil }
         return Word(value: value, translation: translation)
     }
-    var numberOfMeanings: Int {
+    var numberOfItems: Int {
         return wordDetails?.tuc.count ?? 0
     }
     
     // MARK: - Initializer
     
-    init(view: SearchView, networkingManager: TranslateManager) {
+    init(view: SearchView?, networkingManager: TranslateManager, storage: Realm) {
         self.view = view
         self.networkingManager = networkingManager
+        self.storage = storage
     }
     deinit { print("SearchPresenter deinit") }
     
@@ -54,7 +57,10 @@ class SearchPresenter: SearchViewPresenter {
     }
     
     func addToDictionaryWasTapped() {
-        print("addToDictionaryWasTapped")
+        guard let word = word else { return }
+        try! storage.write {
+            storage.add(word, update: true)
+        }
     }
     
     // MARK: - Error handling

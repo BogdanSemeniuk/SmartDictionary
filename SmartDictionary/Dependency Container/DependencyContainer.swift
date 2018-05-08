@@ -7,9 +7,11 @@
 //
 
 import Foundation
+import RealmSwift
 
 class DependencyContainer {
     lazy var apiClient = ApiClientImplementation()
     lazy var networkingManager = NetworkingManager(apiClient: apiClient)
+    lazy var storage = try! Realm()
 }
 
