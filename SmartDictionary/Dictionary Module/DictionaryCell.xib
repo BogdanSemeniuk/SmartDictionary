@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="DictionaryCell" customModule="SmartDictionary" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="59.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tPf-gu-P8i" userLabel="number">
+                        <rect key="frame" x="5" y="16.5" width="45" height="27.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        <color key="textColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🇬🇧" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fuA-6w-kk2" userLabel="flag">
+                        <rect key="frame" x="250.5" y="0.0" width="59.5" height="59.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="fuA-6w-kk2" secondAttribute="height" multiplier="1:1" id="FeM-PS-dNT"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WORD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="3Fi-vT-pdz" userLabel="word">
+                        <rect key="frame" x="65" y="17" width="185.5" height="27.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="tPf-gu-P8i" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.14" id="1Ry-Xg-5Mo"/>
+                    <constraint firstItem="fuA-6w-kk2" firstAttribute="leading" secondItem="3Fi-vT-pdz" secondAttribute="trailing" id="61L-Hq-qF1"/>
+                    <constraint firstAttribute="trailing" secondItem="fuA-6w-kk2" secondAttribute="trailing" constant="10" id="JAG-UP-zzU"/>
+                    <constraint firstItem="3Fi-vT-pdz" firstAttribute="centerY" secondItem="tPf-gu-P8i" secondAttribute="centerY" id="ell-ky-pCY"/>
+                    <constraint firstItem="tPf-gu-P8i" firstAttribute="height" secondItem="3Fi-vT-pdz" secondAttribute="height" id="fC1-C1-Cn9"/>
+                    <constraint firstItem="tPf-gu-P8i" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="foJ-ES-nIy"/>
+                    <constraint firstItem="3Fi-vT-pdz" firstAttribute="leading" secondItem="tPf-gu-P8i" secondAttribute="trailing" constant="15" id="jY2-eY-BQG"/>
+                    <constraint firstAttribute="bottom" secondItem="fuA-6w-kk2" secondAttribute="bottom" id="tSR-zR-vCI"/>
+                    <constraint firstItem="fuA-6w-kk2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="v7E-PM-Y6I"/>
+                    <constraint firstItem="tPf-gu-P8i" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="zml-9G-jaT"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="flagLabel" destination="fuA-6w-kk2" id="Yij-M5-WBv"/>
+                <outlet property="numberLabel" destination="tPf-gu-P8i" id="ftM-pW-ISt"/>
+                <outlet property="wordLabel" destination="3Fi-vT-pdz" id="dOc-Iy-D0K"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

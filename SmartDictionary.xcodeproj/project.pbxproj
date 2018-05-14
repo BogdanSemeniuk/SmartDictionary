@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		238492E79E5D33E91DA833A3 /* Pods_SmartDictionary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 540546CE7E3517F5233C2F2F /* Pods_SmartDictionary.framework */; };
+		4313306F20A306BE00DD916E /* DictionaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4313306D20A306BE00DD916E /* DictionaryCell.swift */; };
+		4313307020A306BE00DD916E /* DictionaryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4313306E20A306BE00DD916E /* DictionaryCell.xib */; };
 		431EE60A2094BC600073B2AE /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431EE6092094BC600073B2AE /* StringExtension.swift */; };
 		4321EAE52092310D00D9A676 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4321EAE42092310D00D9A676 /* Errors.swift */; };
 		432206F9208E39FD000CADAC /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432206F8208E39FD000CADAC /* Result.swift */; };
 		4323036420A2183700EF5194 /* DictionaryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4323036320A2183700EF5194 /* DictionaryTableViewController.swift */; };
 		4323036620A218DD00EF5194 /* DictionaryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4323036520A218DD00EF5194 /* DictionaryPresenter.swift */; };
-		4329B913209B5B35001D5E6D /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4329B912209B5B35001D5E6D /* Word.swift */; };
+		4329B913209B5B35001D5E6D /* WordCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4329B912209B5B35001D5E6D /* WordCard.swift */; };
 		434ED98D208A592600A427FA /* ApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434ED98C208A592600A427FA /* ApiRequest.swift */; };
 		434ED98F208A594400A427FA /* ApiConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434ED98E208A594400A427FA /* ApiConstants.swift */; };
 		4358870B208DD94600BF2511 /* WordDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4358870A208DD94600BF2511 /* WordDetails.swift */; };
@@ -36,6 +38,7 @@
 		438117952084EEC100BA0EB7 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438117942084EEC100BA0EB7 /* MenuViewController.swift */; };
 		438117972084EFA500BA0EB7 /* MenuPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438117962084EFA500BA0EB7 /* MenuPresenter.swift */; };
 		4396ED52208A095600452430 /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4396ED51208A095600452430 /* NetworkingManager.swift */; };
+		43F1E7AC20A9CE550029C9E0 /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F1E7AB20A9CE550029C9E0 /* UILabelExtension.swift */; };
 		D7EFA16778E329DED7E42750 /* Pods_SmartDictionaryTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3979245EE0DAD3FA7F4CC9C6 /* Pods_SmartDictionaryTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,12 +54,14 @@
 
 /* Begin PBXFileReference section */
 		3979245EE0DAD3FA7F4CC9C6 /* Pods_SmartDictionaryTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartDictionaryTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4313306D20A306BE00DD916E /* DictionaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryCell.swift; sourceTree = "<group>"; };
+		4313306E20A306BE00DD916E /* DictionaryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DictionaryCell.xib; sourceTree = "<group>"; };
 		431EE6092094BC600073B2AE /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		4321EAE42092310D00D9A676 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		432206F8208E39FD000CADAC /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		4323036320A2183700EF5194 /* DictionaryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryTableViewController.swift; sourceTree = "<group>"; };
 		4323036520A218DD00EF5194 /* DictionaryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryPresenter.swift; sourceTree = "<group>"; };
-		4329B912209B5B35001D5E6D /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
+		4329B912209B5B35001D5E6D /* WordCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordCard.swift; sourceTree = "<group>"; };
 		434ED98C208A592600A427FA /* ApiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequest.swift; sourceTree = "<group>"; };
 		434ED98E208A594400A427FA /* ApiConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConstants.swift; sourceTree = "<group>"; };
 		4358870A208DD94600BF2511 /* WordDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordDetails.swift; sourceTree = "<group>"; };
@@ -83,6 +88,7 @@
 		438117942084EEC100BA0EB7 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		438117962084EFA500BA0EB7 /* MenuPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPresenter.swift; sourceTree = "<group>"; };
 		4396ED51208A095600452430 /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
+		43F1E7AB20A9CE550029C9E0 /* UILabelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtension.swift; sourceTree = "<group>"; };
 		540546CE7E3517F5233C2F2F /* Pods_SmartDictionary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartDictionary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9F078EF77A09209DBB9FCBB /* Pods-SmartDictionary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartDictionary.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmartDictionary/Pods-SmartDictionary.release.xcconfig"; sourceTree = "<group>"; };
 		D834753B35F31367B2B9ED1F /* Pods-SmartDictionaryTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartDictionaryTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmartDictionaryTests/Pods-SmartDictionaryTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -110,11 +116,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4308F35520A6F75000FE926B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4329B914209B5FB6001D5E6D /* Stored Objects */,
+				4358870D208DD9A700BF2511 /* Entities */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		4323036220A217E500EF5194 /* Dictionary Module */ = {
 			isa = PBXGroup;
 			children = (
 				4323036320A2183700EF5194 /* DictionaryTableViewController.swift */,
 				4323036520A218DD00EF5194 /* DictionaryPresenter.swift */,
+				4313306D20A306BE00DD916E /* DictionaryCell.swift */,
+				4313306E20A306BE00DD916E /* DictionaryCell.xib */,
 			);
 			path = "Dictionary Module";
 			sourceTree = "<group>";
@@ -122,7 +139,7 @@
 		4329B914209B5FB6001D5E6D /* Stored Objects */ = {
 			isa = PBXGroup;
 			children = (
-				4329B912209B5B35001D5E6D /* Word.swift */,
+				4329B912209B5B35001D5E6D /* WordCard.swift */,
 			);
 			path = "Stored Objects";
 			sourceTree = "<group>";
@@ -205,8 +222,8 @@
 			children = (
 				438117722084C0FF00BA0EB7 /* AppDelegate.swift */,
 				431EE6092094BC600073B2AE /* StringExtension.swift */,
-				4329B914209B5FB6001D5E6D /* Stored Objects */,
-				4358870D208DD9A700BF2511 /* Entities */,
+				43F1E7AB20A9CE550029C9E0 /* UILabelExtension.swift */,
+				4308F35520A6F75000FE926B /* Models */,
 				434ED98B208A4B1800A427FA /* Networking */,
 				438117902084EB2F00BA0EB7 /* Navigation */,
 				438117912084EC4800BA0EB7 /* Dependency Container */,
@@ -358,6 +375,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4381177D2084C10100BA0EB7 /* LaunchScreen.storyboard in Resources */,
+				4313307020A306BE00DD916E /* DictionaryCell.xib in Resources */,
 				4381177A2084C10100BA0EB7 /* Assets.xcassets in Resources */,
 				438117782084C0FF00BA0EB7 /* Main.storyboard in Resources */,
 			);
@@ -445,6 +463,7 @@
 				4381178B2084E7BB00BA0EB7 /* Router.swift in Sources */,
 				438117952084EEC100BA0EB7 /* MenuViewController.swift in Sources */,
 				4358870B208DD94600BF2511 /* WordDetails.swift in Sources */,
+				43F1E7AC20A9CE550029C9E0 /* UILabelExtension.swift in Sources */,
 				4323036420A2183700EF5194 /* DictionaryTableViewController.swift in Sources */,
 				43742B532090B79400710443 /* ApiResponse.swift in Sources */,
 				4321EAE52092310D00D9A676 /* Errors.swift in Sources */,
@@ -461,8 +480,9 @@
 				434ED98D208A592600A427FA /* ApiRequest.swift in Sources */,
 				4323036620A218DD00EF5194 /* DictionaryPresenter.swift in Sources */,
 				438117972084EFA500BA0EB7 /* MenuPresenter.swift in Sources */,
+				4313306F20A306BE00DD916E /* DictionaryCell.swift in Sources */,
 				43689E4C2093807900F74E49 /* MeaningTableViewCell.swift in Sources */,
-				4329B913209B5B35001D5E6D /* Word.swift in Sources */,
+				4329B913209B5B35001D5E6D /* WordCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

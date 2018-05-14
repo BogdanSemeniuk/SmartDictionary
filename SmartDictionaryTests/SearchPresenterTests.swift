@@ -54,7 +54,7 @@ class SearchPresenterTests: XCTestCase {
         searchPresenter.searchButtonPressed(text: "")
         searchPresenter.addToDictionaryWasTapped()
         // 3. then
-        XCTAssert(storage.objects(Word.self).count == 1)
+        XCTAssert(storage.objects(WordCard.self).count == 1)
     }
     
     func testAddButtonWasTappedWhenErrorWasSended() {
@@ -64,7 +64,7 @@ class SearchPresenterTests: XCTestCase {
         searchPresenter.searchButtonPressed(text: "")
         searchPresenter.addToDictionaryWasTapped()
         // 3. then
-        XCTAssert(storage.objects(Word.self).count == 0)
+        XCTAssert(storage.objects(WordCard.self).count == 0)
     }
     
     func testAddWordToStoreWhenAddPressedFewTimes() {
@@ -75,6 +75,6 @@ class SearchPresenterTests: XCTestCase {
         searchPresenter.addToDictionaryWasTapped()
         searchPresenter.addToDictionaryWasTapped()
         // 3. then
-        XCTAssert(storage.objects(Word.self).count == 1)
+        XCTAssert(storage.objects(WordCard.self).count == 1)
     }
 }

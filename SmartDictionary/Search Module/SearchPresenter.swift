@@ -25,9 +25,9 @@ class SearchPresenter: SearchViewPresenter {
     private var networkingManager: TranslateManager
     private var storage: Realm
     private var wordDetails: WordDetails?
-    private var word: Word? {
+    private var word: WordCard? {
         guard let value = wordDetails?.phrase, let translation = wordDetails?.tuc.first?.phrase?.text else { return nil }
-        return Word(value: value, translation: translation)
+        return WordCard(value: value, translation: translation)
     }
     var numberOfItems: Int {
         return wordDetails?.tuc.count ?? 0
@@ -57,9 +57,9 @@ class SearchPresenter: SearchViewPresenter {
     }
     
     func addToDictionaryWasTapped() {
-        guard let word = word else { return }
+        guard let word = word, storage.object(ofType: WordCard.self, forPrimaryKey: word.value) == nil else { return }
         try! storage.write {
-            storage.add(word, update: true)
+            storage.add(word)
         }
     }
     

@@ -9,9 +9,10 @@
 import Foundation
 import RealmSwift
 
-@objcMembers class Word: Object {
+@objcMembers class WordCard: Object {
     dynamic var value = ""
     dynamic var translation = ""
+    dynamic var isFlipped = false
     
     convenience init(value: String, translation: String) {
         self.init()

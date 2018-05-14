@@ -42,10 +42,11 @@ extension DependencyContainer: SearchModulFactory {
 
 extension DependencyContainer: DictionaryModulFactory {
     func makeDictionaryModule() -> UIViewController {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "DictionaryTableViewController") as! DictionaryTableViewController
-        let presenter = DictionaryPresenter(view: vc, storage: self.storage)
-        vc.presenter = presenter
+        let vc = self.dictionaryViewController
+        if vc.presenter == nil {
+            let presenter = DictionaryPresenter(view: vc, storage: self.storage)
+            vc.presenter = presenter
+        }
         return vc
     }
 }
