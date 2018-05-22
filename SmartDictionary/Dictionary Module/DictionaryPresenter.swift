@@ -20,17 +20,17 @@ protocol DictionaryViewPresenter {
 class DictionaryPresenter: DictionaryViewPresenter {
     
     private weak var view: DictionaryView?
-    private var storage: Realm
+    private var wordService: WordsStorage
     var numberOfItems: Int {
         return wordCards.count
     }
     private var wordCards: Results<WordCard>
     private var notificationToken: NotificationToken? = nil
     
-    init(view: DictionaryView?, storage: Realm) {
+    init(view: DictionaryView?, wordService: WordsStorage) {
         self.view = view
-        self.storage = storage
-        self.wordCards = storage.objects(WordCard.self)
+        self.wordService = wordService
+        self.wordCards = wordService.wordCards
     }
     deinit {
         print("DictionaryPresenter deinit")
@@ -52,16 +52,12 @@ class DictionaryPresenter: DictionaryViewPresenter {
     
     func selected(cell: DictionaryCellView, forRow row: Int) {
         let wordCard = wordCards[row]
-        try! storage.write {
-            wordCard.isFlipped = !wordCard.isFlipped
-        }
+        wordService.flip(wordCard: wordCard)
     }
     
     func cellDeleted(forRow row: Int) {
         let wordCard = wordCards[row]
-        try! storage.write {
-            storage.delete(wordCard)
-        }
+        wordService.delete(wordCard: wordCard)
     }
     
     private func changeWordWithAnimation(in cell: DictionaryCellView, forRow row: Int) {

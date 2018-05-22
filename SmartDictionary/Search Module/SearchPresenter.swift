@@ -22,8 +22,7 @@ class SearchPresenter: SearchViewPresenter {
     // MARK: - Properties
     
     private weak var view: SearchView?
-    private var networkingManager: TranslateManager
-    private var storage: Realm
+    private var wordService: WordSearch
     private var wordDetails: WordDetails?
     private var word: WordCard? {
         guard let value = wordDetails?.phrase, let translation = wordDetails?.tuc.first?.phrase?.text else { return nil }
@@ -35,32 +34,35 @@ class SearchPresenter: SearchViewPresenter {
     
     // MARK: - Initializer
     
-    init(view: SearchView?, networkingManager: TranslateManager, storage: Realm) {
+    init(view: SearchView?, wordService: WordSearch) {
         self.view = view
-        self.networkingManager = networkingManager
-        self.storage = storage
+        self.wordService = wordService
+        NotificationCenter.default.addObserver(self, selector: #selector(wordDetailsWasSended(_:)), name: NSNotification.Name("wordDetails"), object: nil)
     }
-    deinit { print("SearchPresenter deinit") }
+    deinit {
+        print("SearchPresenter deinit")
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name(rawValue: "wordDetails"), object: nil)
+    }
     
     // MARK: - Action handling
     
-    func searchButtonPressed(text: String) {
-        networkingManager.translate(word: text) { [weak self] result in
-            switch result{
-            case .success(let wordDetails):
-                self?.wordDetails = wordDetails
-                self?.view?.updateView()
-            case .failure(let error):
-                self?.handleError(error)
-            }
+    @objc func wordDetailsWasSended(_ notification: NSNotification) {
+        guard let result = notification.object as? Result<WordDetails> else {  print("Nil"); return }
+        switch result {
+        case .success(let wordDetails):
+            self.wordDetails = wordDetails
+            view?.updateView()
+        case .failure(let error):
+            handleError(error)
         }
     }
     
+    func searchButtonPressed(text: String) {
+        wordService.translate(word: text)
+    }
+    
     func addToDictionaryWasTapped() {
-        guard let word = word, storage.object(ofType: WordCard.self, forPrimaryKey: word.value) == nil else { return }
-        try! storage.write {
-            storage.add(word)
-        }
+        wordService.add(word: word)
     }
     
     // MARK: - Error handling

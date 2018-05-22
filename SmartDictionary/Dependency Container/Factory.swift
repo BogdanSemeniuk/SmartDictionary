@@ -34,7 +34,7 @@ extension DependencyContainer: SearchModulFactory {
     func makeSearchModule() -> UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "SearchViewController") as! SearchViewController
-        let presenter = SearchPresenter(view: vc, networkingManager: self.networkingManager, storage: self.storage)
+        let presenter = SearchPresenter(view: vc, wordService: self.wordService)
         vc.presenter = presenter
         return vc
     }
@@ -44,7 +44,7 @@ extension DependencyContainer: DictionaryModulFactory {
     func makeDictionaryModule() -> UIViewController {
         let vc = self.dictionaryViewController
         if vc.presenter == nil {
-            let presenter = DictionaryPresenter(view: vc, storage: self.storage)
+            let presenter = DictionaryPresenter(view: vc, wordService: self.wordService)
             vc.presenter = presenter
         }
         return vc
