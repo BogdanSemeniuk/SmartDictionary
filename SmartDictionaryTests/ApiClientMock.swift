@@ -23,6 +23,7 @@ class ApiClientMock: ApiClient {
             completionHandler(.success(ApiResponse(httpUrlResponse: response, data: data)))
         case .getError:
             completionHandler(.failure(error))
+            
         }
     }
 }
