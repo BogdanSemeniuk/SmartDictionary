@@ -12,8 +12,6 @@
 		4313307020A306BE00DD916E /* DictionaryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4313306E20A306BE00DD916E /* DictionaryCell.xib */; };
 		431EDD1320B441DE00DE9900 /* WordService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431EDD1220B441DE00DE9900 /* WordService.swift */; };
 		431EDD1D20B46C5D00DE9900 /* ApiClientMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431EDD1C20B46C5D00DE9900 /* ApiClientMock.swift */; };
-		431EDD1F20B47FF900DE9900 /* wordDetails.json in Resources */ = {isa = PBXBuildFile; fileRef = 431EDD1E20B47FF900DE9900 /* wordDetails.json */; };
-		431EDD2120B4803D00DE9900 /* JsonStubs.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 431EDD2020B4803D00DE9900 /* JsonStubs.xcassets */; };
 		431EE60A2094BC600073B2AE /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431EE6092094BC600073B2AE /* StringExtension.swift */; };
 		4321EAE52092310D00D9A676 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4321EAE42092310D00D9A676 /* Errors.swift */; };
 		432206F9208E39FD000CADAC /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432206F8208E39FD000CADAC /* Result.swift */; };
@@ -41,6 +39,7 @@
 		438117952084EEC100BA0EB7 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438117942084EEC100BA0EB7 /* MenuViewController.swift */; };
 		438117972084EFA500BA0EB7 /* MenuPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438117962084EFA500BA0EB7 /* MenuPresenter.swift */; };
 		43F1E7AC20A9CE550029C9E0 /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F1E7AB20A9CE550029C9E0 /* UILabelExtension.swift */; };
+		43FD0BD120B59E5200F7394B /* wordDetails.json in Resources */ = {isa = PBXBuildFile; fileRef = 43FD0BD020B59E5200F7394B /* wordDetails.json */; };
 		D7EFA16778E329DED7E42750 /* Pods_SmartDictionaryTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3979245EE0DAD3FA7F4CC9C6 /* Pods_SmartDictionaryTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,8 +59,6 @@
 		4313306E20A306BE00DD916E /* DictionaryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DictionaryCell.xib; sourceTree = "<group>"; };
 		431EDD1220B441DE00DE9900 /* WordService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordService.swift; sourceTree = "<group>"; };
 		431EDD1C20B46C5D00DE9900 /* ApiClientMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClientMock.swift; sourceTree = "<group>"; };
-		431EDD1E20B47FF900DE9900 /* wordDetails.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = wordDetails.json; sourceTree = "<group>"; };
-		431EDD2020B4803D00DE9900 /* JsonStubs.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = JsonStubs.xcassets; sourceTree = "<group>"; };
 		431EE6092094BC600073B2AE /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		4321EAE42092310D00D9A676 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		432206F8208E39FD000CADAC /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
@@ -93,6 +90,7 @@
 		438117942084EEC100BA0EB7 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		438117962084EFA500BA0EB7 /* MenuPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPresenter.swift; sourceTree = "<group>"; };
 		43F1E7AB20A9CE550029C9E0 /* UILabelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtension.swift; sourceTree = "<group>"; };
+		43FD0BD020B59E5200F7394B /* wordDetails.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = wordDetails.json; sourceTree = "<group>"; };
 		540546CE7E3517F5233C2F2F /* Pods_SmartDictionary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartDictionary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9F078EF77A09209DBB9FCBB /* Pods-SmartDictionary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartDictionary.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmartDictionary/Pods-SmartDictionary.release.xcconfig"; sourceTree = "<group>"; };
 		D834753B35F31367B2B9ED1F /* Pods-SmartDictionaryTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartDictionaryTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmartDictionaryTests/Pods-SmartDictionaryTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -193,8 +191,8 @@
 			children = (
 				4364E635208640F70048E9EA /* MenuTests.swift */,
 				436C01A920A0E14300D11B7D /* SearchPresenterTests.swift */,
+				43FD0BD020B59E5200F7394B /* wordDetails.json */,
 				4370074D2087641600136187 /* RouterSpy.swift */,
-				431EDD2020B4803D00DE9900 /* JsonStubs.xcassets */,
 				431EDD1C20B46C5D00DE9900 /* ApiClientMock.swift */,
 				4364E62B2086402E0048E9EA /* Info.plist */,
 			);
@@ -246,7 +244,6 @@
 			isa = PBXGroup;
 			children = (
 				438117792084C10100BA0EB7 /* Assets.xcassets */,
-				431EDD1E20B47FF900DE9900 /* wordDetails.json */,
 				4381177B2084C10100BA0EB7 /* LaunchScreen.storyboard */,
 			);
 			path = "Supporting Files";
@@ -373,8 +370,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				431EDD1F20B47FF900DE9900 /* wordDetails.json in Resources */,
-				431EDD2120B4803D00DE9900 /* JsonStubs.xcassets in Resources */,
+				43FD0BD120B59E5200F7394B /* wordDetails.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

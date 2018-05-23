@@ -47,7 +47,7 @@ class SearchPresenter: SearchViewPresenter {
     // MARK: - Action handling
     
     @objc func wordDetailsWasSended(_ notification: NSNotification) {
-        guard let result = notification.object as? Result<WordDetails> else {  print("Nil"); return }
+        guard let result = notification.object as? Result<WordDetails> else { return }
         switch result {
         case .success(let wordDetails):
             self.wordDetails = wordDetails
