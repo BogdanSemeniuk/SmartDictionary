@@ -28,7 +28,7 @@ extension DependencyContainer: MenuModulFactory {
     func makeMenuModule(router: Router) -> UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "MenuViewController") as! MenuViewController
-        let presenter = MenuPresenter(view: vc, router: router)
+        let presenter = MenuPresenter(view: vc, router: router, menuService: wordService)
         vc.presenter = presenter
         return vc
     }
@@ -38,7 +38,7 @@ extension DependencyContainer: SearchModulFactory {
     func makeSearchModule() -> UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "SearchViewController") as! SearchViewController
-        let presenter = SearchPresenter(view: vc, wordService: self.wordService)
+        let presenter = SearchPresenter(view: vc, wordService: wordService)
         vc.presenter = presenter
         return vc
     }
@@ -48,7 +48,7 @@ extension DependencyContainer: DictionaryModulFactory {
     func makeDictionaryModule() -> UIViewController {
         let vc = self.dictionaryViewController
         if vc.presenter == nil {
-            let presenter = DictionaryPresenter(view: vc, wordService: self.wordService)
+            let presenter = DictionaryPresenter(view: vc, wordService: wordService)
             vc.presenter = presenter
         }
         return vc

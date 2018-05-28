@@ -6,4 +6,17 @@
 //  Copyright © 2018 Bogdan. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+@IBDesignable extension UIView {
+    
+    @IBInspectable
+    public var viewCornerRadius: CGFloat{
+        set{
+            self.layer.cornerRadius = newValue
+        }get{
+            return self.layer.cornerRadius
+        }
+    }
+    
+}

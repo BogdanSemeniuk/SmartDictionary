@@ -19,6 +19,7 @@
 		4323036620A218DD00EF5194 /* DictionaryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4323036520A218DD00EF5194 /* DictionaryPresenter.swift */; };
 		43235D9620B822530070B9C4 /* TrainingSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43235D9520B822530070B9C4 /* TrainingSettingsViewController.swift */; };
 		43235D9920B822FA0070B9C4 /* TrainingSettingsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43235D9820B822FA0070B9C4 /* TrainingSettingsPresenter.swift */; };
+		4326519420BC0B8C000649E1 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4326519320BC0B8C000649E1 /* UIViewExtension.swift */; };
 		4329B913209B5B35001D5E6D /* WordCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4329B912209B5B35001D5E6D /* WordCard.swift */; };
 		434ED98D208A592600A427FA /* ApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434ED98C208A592600A427FA /* ApiRequest.swift */; };
 		434ED98F208A594400A427FA /* ApiConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434ED98E208A594400A427FA /* ApiConstants.swift */; };
@@ -68,6 +69,7 @@
 		4323036520A218DD00EF5194 /* DictionaryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryPresenter.swift; sourceTree = "<group>"; };
 		43235D9520B822530070B9C4 /* TrainingSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingSettingsViewController.swift; sourceTree = "<group>"; };
 		43235D9820B822FA0070B9C4 /* TrainingSettingsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingSettingsPresenter.swift; sourceTree = "<group>"; };
+		4326519320BC0B8C000649E1 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		4329B912209B5B35001D5E6D /* WordCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordCard.swift; sourceTree = "<group>"; };
 		434ED98C208A592600A427FA /* ApiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequest.swift; sourceTree = "<group>"; };
 		434ED98E208A594400A427FA /* ApiConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConstants.swift; sourceTree = "<group>"; };
@@ -238,6 +240,7 @@
 				438117722084C0FF00BA0EB7 /* AppDelegate.swift */,
 				431EE6092094BC600073B2AE /* StringExtension.swift */,
 				431EDD1220B441DE00DE9900 /* WordService.swift */,
+				4326519320BC0B8C000649E1 /* UIViewExtension.swift */,
 				43F1E7AB20A9CE550029C9E0 /* UILabelExtension.swift */,
 				4308F35520A6F75000FE926B /* Models */,
 				434ED98B208A4B1800A427FA /* Networking */,
@@ -500,6 +503,7 @@
 				43235D9920B822FA0070B9C4 /* TrainingSettingsPresenter.swift in Sources */,
 				43235D9620B822530070B9C4 /* TrainingSettingsViewController.swift in Sources */,
 				438117972084EFA500BA0EB7 /* MenuPresenter.swift in Sources */,
+				4326519420BC0B8C000649E1 /* UIViewExtension.swift in Sources */,
 				4313306F20A306BE00DD916E /* DictionaryCell.swift in Sources */,
 				43689E4C2093807900F74E49 /* MeaningTableViewCell.swift in Sources */,
 				4329B913209B5B35001D5E6D /* WordCard.swift in Sources */,

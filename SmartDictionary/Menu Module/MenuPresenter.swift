@@ -21,12 +21,14 @@ class MenuPresenter: MenuViewPresenter {
     
     private weak var view: MenuView?
     private var router: Router
+    private var menuService: MenuStorage
     
     // MARK: - Initializer
     
-    init(view: MenuView?, router: Router) {
+    init(view: MenuView?, router: Router, menuService: MenuStorage) {
         self.view = view
         self.router = router
+        self.menuService = menuService
     }
     
     deinit { print("MenuPresenter deinit") }
@@ -48,6 +50,10 @@ class MenuPresenter: MenuViewPresenter {
     }
     
     func trainingButtonWasTapped() {
-        router.navigate(to: .trainingSettings)
+        if menuService.wordCards.isEmpty {
+            view?.showMessage()
+        } else {
+            router.navigate(to: .trainingSettings)
+        }
     }
 }
