@@ -10,10 +10,10 @@ import Foundation
 import RealmSwift
 
 protocol SearchViewPresenter {
+    var numberOfItems: Int { get }
     func searchViewDidLoad()
     func searchButtonPressed(text: String)
     func configure(cell: MeaningCellView, forRow row: Int)
-    var numberOfItems: Int { get }
     func addToDictionaryWasTapped()
 }
 
@@ -37,28 +37,21 @@ class SearchPresenter: SearchViewPresenter {
     init(view: SearchView?, wordService: WordSearch) {
         self.view = view
         self.wordService = wordService
-        NotificationCenter.default.addObserver(self, selector: #selector(wordDetailsWasSended(_:)), name: NSNotification.Name("wordDetails"), object: nil)
     }
-    deinit {
-        print("SearchPresenter deinit")
-        NotificationCenter.default.removeObserver(self, name: NSNotification.Name(rawValue: "wordDetails"), object: nil)
-    }
+    deinit { print("SearchPresenter deinit") }
     
     // MARK: - Action handling
     
-    @objc func wordDetailsWasSended(_ notification: NSNotification) {
-        guard let result = notification.object as? Result<WordDetails> else { return }
-        switch result {
-        case .success(let wordDetails):
-            self.wordDetails = wordDetails
-            view?.updateView()
-        case .failure(let error):
-            handleError(error)
-        }
-    }
-    
     func searchButtonPressed(text: String) {
-        wordService.translate(word: text)
+        wordService.translate(word: text, complitionHandler: { [weak self] result in
+            switch result {
+            case .success(let wordDetails):
+                self?.wordDetails = wordDetails
+                self?.view?.updateView()
+            case .failure(let error):
+                self?.handleError(error)
+            }
+        })
     }
     
     func addToDictionaryWasTapped() {

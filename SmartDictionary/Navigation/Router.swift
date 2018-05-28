@@ -20,7 +20,7 @@ class Router: Navigator {
     
     // MARK: - Initializer
     
-    init(navigationController: UINavigationController, dependencyContainer: DependencyContainer) {
+    init(navigationController: UINavigationController?, dependencyContainer: DependencyContainer) {
         self.navigationController = navigationController
         self.dependencyContainer = dependencyContainer
     }
@@ -37,6 +37,7 @@ class Router: Navigator {
         case .menu: return dependencyContainer.makeMenuModule(router: self)
         case .search: return dependencyContainer.makeSearchModule()
         case .dictionary: return dependencyContainer.makeDictionaryModule()
+        case .trainingSettings: return dependencyContainer.makeTrainingSettingsModule()
         }
     }
 }
@@ -48,6 +49,7 @@ extension Router {
         case menu
         case search
         case dictionary
+        case trainingSettings
     }
 }
 

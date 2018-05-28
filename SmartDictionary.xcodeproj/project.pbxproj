@@ -17,6 +17,8 @@
 		432206F9208E39FD000CADAC /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432206F8208E39FD000CADAC /* Result.swift */; };
 		4323036420A2183700EF5194 /* DictionaryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4323036320A2183700EF5194 /* DictionaryTableViewController.swift */; };
 		4323036620A218DD00EF5194 /* DictionaryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4323036520A218DD00EF5194 /* DictionaryPresenter.swift */; };
+		43235D9620B822530070B9C4 /* TrainingSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43235D9520B822530070B9C4 /* TrainingSettingsViewController.swift */; };
+		43235D9920B822FA0070B9C4 /* TrainingSettingsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43235D9820B822FA0070B9C4 /* TrainingSettingsPresenter.swift */; };
 		4329B913209B5B35001D5E6D /* WordCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4329B912209B5B35001D5E6D /* WordCard.swift */; };
 		434ED98D208A592600A427FA /* ApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434ED98C208A592600A427FA /* ApiRequest.swift */; };
 		434ED98F208A594400A427FA /* ApiConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434ED98E208A594400A427FA /* ApiConstants.swift */; };
@@ -64,6 +66,8 @@
 		432206F8208E39FD000CADAC /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		4323036320A2183700EF5194 /* DictionaryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryTableViewController.swift; sourceTree = "<group>"; };
 		4323036520A218DD00EF5194 /* DictionaryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryPresenter.swift; sourceTree = "<group>"; };
+		43235D9520B822530070B9C4 /* TrainingSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingSettingsViewController.swift; sourceTree = "<group>"; };
+		43235D9820B822FA0070B9C4 /* TrainingSettingsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingSettingsPresenter.swift; sourceTree = "<group>"; };
 		4329B912209B5B35001D5E6D /* WordCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordCard.swift; sourceTree = "<group>"; };
 		434ED98C208A592600A427FA /* ApiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequest.swift; sourceTree = "<group>"; };
 		434ED98E208A594400A427FA /* ApiConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConstants.swift; sourceTree = "<group>"; };
@@ -136,6 +140,15 @@
 				4313306E20A306BE00DD916E /* DictionaryCell.xib */,
 			);
 			path = "Dictionary Module";
+			sourceTree = "<group>";
+		};
+		43235D9720B8226D0070B9C4 /* Training Settings Module */ = {
+			isa = PBXGroup;
+			children = (
+				43235D9520B822530070B9C4 /* TrainingSettingsViewController.swift */,
+				43235D9820B822FA0070B9C4 /* TrainingSettingsPresenter.swift */,
+			);
+			path = "Training Settings Module";
 			sourceTree = "<group>";
 		};
 		4329B914209B5FB6001D5E6D /* Stored Objects */ = {
@@ -231,6 +244,7 @@
 				438117902084EB2F00BA0EB7 /* Navigation */,
 				438117912084EC4800BA0EB7 /* Dependency Container */,
 				438117762084C0FF00BA0EB7 /* Main.storyboard */,
+				43235D9720B8226D0070B9C4 /* Training Settings Module */,
 				4323036220A217E500EF5194 /* Dictionary Module */,
 				4364E622208637350048E9EA /* Search Module */,
 				4364E61D208636110048E9EA /* Menu Module */,
@@ -483,6 +497,8 @@
 				431EDD1320B441DE00DE9900 /* WordService.swift in Sources */,
 				434ED98D208A592600A427FA /* ApiRequest.swift in Sources */,
 				4323036620A218DD00EF5194 /* DictionaryPresenter.swift in Sources */,
+				43235D9920B822FA0070B9C4 /* TrainingSettingsPresenter.swift in Sources */,
+				43235D9620B822530070B9C4 /* TrainingSettingsViewController.swift in Sources */,
 				438117972084EFA500BA0EB7 /* MenuPresenter.swift in Sources */,
 				4313306F20A306BE00DD916E /* DictionaryCell.swift in Sources */,
 				43689E4C2093807900F74E49 /* MeaningTableViewCell.swift in Sources */,

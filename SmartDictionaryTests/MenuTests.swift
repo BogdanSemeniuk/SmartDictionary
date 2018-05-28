@@ -18,9 +18,8 @@ class MenuTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        nc = UINavigationController()
         depenpencyContainer = DependencyContainer()
-        router = RouterSpy(navigationController: nc, dependencyContainer: depenpencyContainer)
+        router = RouterSpy(navigationController: nil, dependencyContainer: depenpencyContainer)
         menuPresenter = MenuPresenter(view: nil, router: router)
     }
     
@@ -35,6 +34,18 @@ class MenuTests: XCTestCase {
     func testNavigateMethodCalledWhenSearchButtonTapped() {
         XCTAssertNil(router.currentNavigation, "MockRouter.currentNavigation is not nil")
         menuPresenter.searchButtonWasTapped()
+        XCTAssertNotNil(router.currentNavigation, "Navigation method was not call")
+    }
+    
+    func testNavigateMethodCalledWhenDictionaryButtonTapped() {
+        XCTAssertNil(router.currentNavigation, "MockRouter.currentNavigation is not nil")
+        menuPresenter.dictionaryButtonWasTapped()
+        XCTAssertNotNil(router.currentNavigation, "Navigation method was not call")
+    }
+    
+    func testNavigateMethodCalledWhenTrainingButtonTapped() {
+        XCTAssertNil(router.currentNavigation, "MockRouter.currentNavigation is not nil")
+        menuPresenter.trainingButtonWasTapped()
         XCTAssertNotNil(router.currentNavigation, "Navigation method was not call")
     }
 }

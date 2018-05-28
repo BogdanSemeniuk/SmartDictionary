@@ -11,7 +11,7 @@ import RealmSwift
 
 protocol WordSearch {
     func add(word: WordCard?)
-    func translate(word: String)
+    func translate(word: String, complitionHandler: @escaping (Result<WordDetails>) -> ())
 }
 
 protocol WordsStorage {
@@ -51,7 +51,7 @@ class WordService: WordSearch, WordsStorage {
         }
     }
     
-    func translate(word: String) {
+    func translate(word: String, complitionHandler: @escaping (Result<WordDetails>) -> ()) {
         let urlRequest = try! APIRequest.translate(word: word).asURLRequest()
         apiClient.execute(request: urlRequest) { (result: Result<ApiResponse>) in
             switch result {
@@ -59,13 +59,13 @@ class WordService: WordSearch, WordsStorage {
                 if let responseData = response.data {
                     do {
                         let wordDetails = try JSONDecoder().decode(WordDetails.self, from: responseData)
-                        NotificationCenter.default.post(name: NSNotification.Name("wordDetails"), object: Result<WordDetails>.success(wordDetails))
+                        complitionHandler(.success(wordDetails))
                     } catch {
-                        NotificationCenter.default.post(name: NSNotification.Name("wordDetails"), object: Result<WordDetails>.failure(ParseError()))
+                        complitionHandler(.failure(ParseError()))
                     }
                 }
             case .failure(let error):
-                NotificationCenter.default.post(name: NSNotification.Name("wordDetails"), object: Result<WordDetails>.failure(error))
+                complitionHandler(.failure(error))
             }
         }
     }

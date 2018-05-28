@@ -40,7 +40,7 @@ class MenuViewController: UIViewController, MenuView {
         presenter.dictionaryButtonWasTapped()
     }
     @IBAction func trainingButtonTapped(_ sender: UIButton) {
-        
+        presenter.trainingButtonWasTapped()
     }
     
     

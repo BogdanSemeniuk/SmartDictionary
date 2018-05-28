@@ -48,6 +48,6 @@ class MenuPresenter: MenuViewPresenter {
     }
     
     func trainingButtonWasTapped() {
-        
+        router.navigate(to: .trainingSettings)
     }
 }
