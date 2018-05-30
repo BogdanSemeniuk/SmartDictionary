@@ -21,7 +21,7 @@ protocol DictionaryModulFactory {
 }
 
 protocol TrainingSettingsModulFactory {
-    func makeTrainingSettingsModule() -> UIViewController
+    func makeTrainingSettingsModule(router: Router) -> UIViewController
 }
 
 protocol TrainingModulFactory {
@@ -60,10 +60,10 @@ extension DependencyContainer: DictionaryModulFactory {
 }
 
 extension DependencyContainer: TrainingSettingsModulFactory {
-    func makeTrainingSettingsModule() -> UIViewController {
+    func makeTrainingSettingsModule(router: Router) -> UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "TrainingSettingsViewController") as! TrainingSettingsViewController
-        let presenter = TrainingSettingsPresenter(view: vc, wordService: wordService)
+        let presenter = TrainingSettingsPresenter(view: vc, wordService: wordService, router: router)
         vc.presenter = presenter
         return vc
     }

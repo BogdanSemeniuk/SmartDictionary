@@ -37,7 +37,7 @@ class Router: Navigator {
         case .menu: return dependencyContainer.makeMenuModule(router: self)
         case .search: return dependencyContainer.makeSearchModule()
         case .dictionary: return dependencyContainer.makeDictionaryModule()
-        case .trainingSettings: return dependencyContainer.makeTrainingSettingsModule()
+        case .trainingSettings: return dependencyContainer.makeTrainingSettingsModule(router: self)
         case .training(let settings): return dependencyContainer.makeTrainingModule(with: settings)
         }
     }

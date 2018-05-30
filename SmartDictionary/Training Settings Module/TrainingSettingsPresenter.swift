@@ -17,10 +17,12 @@ class TrainingSettingsPresenter: SettingsViewPresenter {
     
     private weak var view: TrainingSettingsView?
     private var wordService: Storage
+    private var router: Router
     
-    init(view: TrainingSettingsView, wordService: Storage) {
+    init(view: TrainingSettingsView, wordService: Storage, router: Router) {
         self.view = view
         self.wordService = wordService
+        self.router = router
     }
     
     func settingsViewDidLoad() {
@@ -35,6 +37,6 @@ class TrainingSettingsPresenter: SettingsViewPresenter {
         default: break
         }
         let settings = TrainingSettings(cardLanguage: language, randomOrder: switchIsOn, cardsCount: sliderValue)
-        print(settings)
+        router.navigate(to: .training(settings))
     }
 }
