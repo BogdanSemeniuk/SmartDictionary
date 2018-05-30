@@ -24,6 +24,10 @@ protocol TrainingSettingsModulFactory {
     func makeTrainingSettingsModule() -> UIViewController
 }
 
+protocol TrainingModulFactory {
+    func makeTrainingModule(with settings: TrainingSettings) -> UIViewController
+}
+
 extension DependencyContainer: MenuModulFactory {
     func makeMenuModule(router: Router) -> UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -59,9 +63,21 @@ extension DependencyContainer: TrainingSettingsModulFactory {
     func makeTrainingSettingsModule() -> UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "TrainingSettingsViewController") as! TrainingSettingsViewController
-        let presenter = TrainingSettingsPresenter(view: vc)
+        let presenter = TrainingSettingsPresenter(view: vc, wordService: wordService)
         vc.presenter = presenter
         return vc
     }
+}
+
+extension DependencyContainer: TrainingModulFactory {
+    func makeTrainingModule(with settings: TrainingSettings) -> UIViewController {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "TrainingViewController") as! TrainingViewController
+        let presenter = TrainingPresenter(view: vc, settings: settings)
+        vc.presenter = presenter
+        return vc
+    }
+    
+    
 }
 

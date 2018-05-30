@@ -38,6 +38,7 @@ class Router: Navigator {
         case .search: return dependencyContainer.makeSearchModule()
         case .dictionary: return dependencyContainer.makeDictionaryModule()
         case .trainingSettings: return dependencyContainer.makeTrainingSettingsModule()
+        case .training(let settings): return dependencyContainer.makeTrainingModule(with: settings)
         }
     }
 }
@@ -50,6 +51,7 @@ extension Router {
         case search
         case dictionary
         case trainingSettings
+        case training(TrainingSettings)
     }
 }
 

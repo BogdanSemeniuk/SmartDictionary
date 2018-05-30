@@ -20,11 +20,11 @@ protocol WordsStorage {
     var wordCards: Results<WordCard> { get }
 }
 
-protocol MenuStorage {
+protocol Storage {
     var wordCards: Results<WordCard> { get }
 }
 
-class WordService: WordSearch, WordsStorage, MenuStorage {
+class WordService: WordSearch, WordsStorage, Storage {
     private var storage: Realm!
     private var apiClient: ApiClient!
     var wordCards: Results<WordCard> {

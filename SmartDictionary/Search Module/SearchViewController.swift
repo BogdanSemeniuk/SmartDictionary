@@ -18,9 +18,9 @@ class SearchViewController: UIViewController, SearchView {
     
     // MARK: - Properties and outlet
     
-    @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet private weak var searchBar: UISearchBar!
     var presenter: SearchViewPresenter!
-    @IBOutlet weak var meaningsTableView: UITableView!
+    @IBOutlet private weak var meaningsTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()

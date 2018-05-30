@@ -372,12 +372,15 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="MNX-Bn-ppr">
+                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="MNX-Bn-ppr">
                                                         <rect key="frame" x="45.5" y="59.5" width="225" height="31"/>
                                                         <color key="tintColor" red="0.0" green="0.56470588235294117" blue="0.31764705882352939" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <connections>
+                                                            <action selector="sliderValueChanged:" destination="efQ-S0-HNO" eventType="valueChanged" id="nXe-G2-ghD"/>
+                                                        </connections>
                                                     </slider>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cNg-4h-32G">
-                                                        <rect key="frame" x="10" y="44" width="296" height="14.5"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cNg-4h-32G">
+                                                        <rect key="frame" x="10" y="44" width="296" height="15"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -437,6 +440,9 @@
                                                                 <real key="value" value="5"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="playButtonPressed:" destination="efQ-S0-HNO" eventType="touchUpInside" id="CNF-jq-7rJ"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -491,10 +497,32 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jFP-44-Zjr"/>
                     </view>
+                    <connections>
+                        <outlet property="cardsLanguageSegmentedControl" destination="aeL-lb-sXO" id="Ksi-Lx-0pZ"/>
+                        <outlet property="countCardsSlider" destination="MNX-Bn-ppr" id="AGS-yD-9CS"/>
+                        <outlet property="currentCountOfCardsLabel" destination="cNg-4h-32G" id="60z-iI-mLe"/>
+                        <outlet property="maxCountOfCardsLabel" destination="Wtc-U7-BvN" id="K4h-IP-euA"/>
+                        <outlet property="randomOrderSwitch" destination="NbM-18-C8c" id="ui5-bs-Aii"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XIQ-4A-j04" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3082.5" y="32.5"/>
+        </scene>
+        <!--Training View Controller-->
+        <scene sceneID="ixo-7E-lYO">
+            <objects>
+                <viewController storyboardIdentifier="TrainingViewController" id="lHG-be-3YX" customClass="TrainingViewController" customModule="SmartDictionary" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="g1f-hG-OHi">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Hu4-k8-L2J"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u4u-uh-wme" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3932" y="26"/>
         </scene>
     </scenes>
     <resources>

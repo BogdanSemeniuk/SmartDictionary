@@ -41,6 +41,9 @@
 		438117932084ECD300BA0EB7 /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438117922084ECD300BA0EB7 /* Factory.swift */; };
 		438117952084EEC100BA0EB7 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438117942084EEC100BA0EB7 /* MenuViewController.swift */; };
 		438117972084EFA500BA0EB7 /* MenuPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438117962084EFA500BA0EB7 /* MenuPresenter.swift */; };
+		438D057D20BDCC0E00F36C8E /* TrainingSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438D057C20BDCC0E00F36C8E /* TrainingSettings.swift */; };
+		43F0BAA120BEB126007EA24E /* TrainingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F0BAA020BEB126007EA24E /* TrainingPresenter.swift */; };
+		43F0BAA320BEB194007EA24E /* TrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F0BAA220BEB194007EA24E /* TrainingViewController.swift */; };
 		43F1E7AC20A9CE550029C9E0 /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F1E7AB20A9CE550029C9E0 /* UILabelExtension.swift */; };
 		43FD0BD120B59E5200F7394B /* wordDetails.json in Resources */ = {isa = PBXBuildFile; fileRef = 43FD0BD020B59E5200F7394B /* wordDetails.json */; };
 		D7EFA16778E329DED7E42750 /* Pods_SmartDictionaryTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3979245EE0DAD3FA7F4CC9C6 /* Pods_SmartDictionaryTests.framework */; };
@@ -95,6 +98,9 @@
 		438117922084ECD300BA0EB7 /* Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
 		438117942084EEC100BA0EB7 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		438117962084EFA500BA0EB7 /* MenuPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPresenter.swift; sourceTree = "<group>"; };
+		438D057C20BDCC0E00F36C8E /* TrainingSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingSettings.swift; sourceTree = "<group>"; };
+		43F0BAA020BEB126007EA24E /* TrainingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingPresenter.swift; sourceTree = "<group>"; };
+		43F0BAA220BEB194007EA24E /* TrainingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingViewController.swift; sourceTree = "<group>"; };
 		43F1E7AB20A9CE550029C9E0 /* UILabelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtension.swift; sourceTree = "<group>"; };
 		43FD0BD020B59E5200F7394B /* wordDetails.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = wordDetails.json; sourceTree = "<group>"; };
 		540546CE7E3517F5233C2F2F /* Pods_SmartDictionary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartDictionary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -177,6 +183,7 @@
 		4358870D208DD9A700BF2511 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				438D057C20BDCC0E00F36C8E /* TrainingSettings.swift */,
 				4358870A208DD94600BF2511 /* WordDetails.swift */,
 			);
 			path = Entities;
@@ -239,14 +246,12 @@
 			children = (
 				438117722084C0FF00BA0EB7 /* AppDelegate.swift */,
 				431EE6092094BC600073B2AE /* StringExtension.swift */,
-				431EDD1220B441DE00DE9900 /* WordService.swift */,
 				4326519320BC0B8C000649E1 /* UIViewExtension.swift */,
 				43F1E7AB20A9CE550029C9E0 /* UILabelExtension.swift */,
 				4308F35520A6F75000FE926B /* Models */,
-				434ED98B208A4B1800A427FA /* Networking */,
-				438117902084EB2F00BA0EB7 /* Navigation */,
-				438117912084EC4800BA0EB7 /* Dependency Container */,
+				43F0BA9F20BEAF11007EA24E /* Services */,
 				438117762084C0FF00BA0EB7 /* Main.storyboard */,
+				43F0BAA420BEB29D007EA24E /* Training Module */,
 				43235D9720B8226D0070B9C4 /* Training Settings Module */,
 				4323036220A217E500EF5194 /* Dictionary Module */,
 				4364E622208637350048E9EA /* Search Module */,
@@ -281,6 +286,26 @@
 				438117922084ECD300BA0EB7 /* Factory.swift */,
 			);
 			path = "Dependency Container";
+			sourceTree = "<group>";
+		};
+		43F0BA9F20BEAF11007EA24E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				431EDD1220B441DE00DE9900 /* WordService.swift */,
+				434ED98B208A4B1800A427FA /* Networking */,
+				438117902084EB2F00BA0EB7 /* Navigation */,
+				438117912084EC4800BA0EB7 /* Dependency Container */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		43F0BAA420BEB29D007EA24E /* Training Module */ = {
+			isa = PBXGroup;
+			children = (
+				43F0BAA020BEB126007EA24E /* TrainingPresenter.swift */,
+				43F0BAA220BEB194007EA24E /* TrainingViewController.swift */,
+			);
+			path = "Training Module";
 			sourceTree = "<group>";
 		};
 		AEDB0427329331CD4827861A /* Frameworks */ = {
@@ -481,6 +506,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				438D057D20BDCC0E00F36C8E /* TrainingSettings.swift in Sources */,
 				4381178B2084E7BB00BA0EB7 /* Router.swift in Sources */,
 				438117952084EEC100BA0EB7 /* MenuViewController.swift in Sources */,
 				4358870B208DD94600BF2511 /* WordDetails.swift in Sources */,
@@ -499,9 +525,11 @@
 				431EE60A2094BC600073B2AE /* StringExtension.swift in Sources */,
 				431EDD1320B441DE00DE9900 /* WordService.swift in Sources */,
 				434ED98D208A592600A427FA /* ApiRequest.swift in Sources */,
+				43F0BAA320BEB194007EA24E /* TrainingViewController.swift in Sources */,
 				4323036620A218DD00EF5194 /* DictionaryPresenter.swift in Sources */,
 				43235D9920B822FA0070B9C4 /* TrainingSettingsPresenter.swift in Sources */,
 				43235D9620B822530070B9C4 /* TrainingSettingsViewController.swift in Sources */,
+				43F0BAA120BEB126007EA24E /* TrainingPresenter.swift in Sources */,
 				438117972084EFA500BA0EB7 /* MenuPresenter.swift in Sources */,
 				4326519420BC0B8C000649E1 /* UIViewExtension.swift in Sources */,
 				4313306F20A306BE00DD916E /* DictionaryCell.swift in Sources */,

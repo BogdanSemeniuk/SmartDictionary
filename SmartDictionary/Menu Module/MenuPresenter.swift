@@ -21,11 +21,11 @@ class MenuPresenter: MenuViewPresenter {
     
     private weak var view: MenuView?
     private var router: Router
-    private var menuService: MenuStorage
+    private var menuService: Storage
     
     // MARK: - Initializer
     
-    init(view: MenuView?, router: Router, menuService: MenuStorage) {
+    init(view: MenuView?, router: Router, menuService: Storage) {
         self.view = view
         self.router = router
         self.menuService = menuService
