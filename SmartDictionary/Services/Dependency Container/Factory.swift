@@ -73,7 +73,8 @@ extension DependencyContainer: TrainingModulFactory {
     func makeTrainingModule(with settings: TrainingSettings) -> UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "TrainingViewController") as! TrainingViewController
-        let presenter = TrainingPresenter(view: vc, settings: settings)
+        let training = TrainingImplementation(trainingSettings: settings, storage: wordService)
+        let presenter = TrainingPresenter(view: vc, training: training)
         vc.presenter = presenter
         return vc
     }

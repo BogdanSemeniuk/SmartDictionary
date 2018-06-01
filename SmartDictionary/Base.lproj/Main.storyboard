@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -55,7 +55,7 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="B2A-Ed-5gD">
-                                        <rect key="frame" x="90" y="159.5" width="130" height="130"/>
+                                        <rect key="frame" x="90" y="160" width="130" height="130"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aVK-Oq-RkO">
                                                 <rect key="frame" x="13.5" y="0.0" width="103" height="103.5"/>
@@ -84,7 +84,7 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="i0f-PS-O5y">
-                                        <rect key="frame" x="90" y="319.5" width="130" height="130.5"/>
+                                        <rect key="frame" x="90" y="320.5" width="130" height="129.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8dt-X3-PJI">
                                                 <rect key="frame" x="13.5" y="0.0" width="103" height="103"/>
@@ -99,7 +99,7 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Training" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="tM9-1E-8LF">
-                                                <rect key="frame" x="23" y="103" width="84" height="27.5"/>
+                                                <rect key="frame" x="23" y="103" width="84" height="26.5"/>
                                                 <fontDescription key="fontDescription" name="AmericanTypewriter-CondensedBold" family="American Typewriter" pointSize="25"/>
                                                 <color key="textColor" red="0.0" green="0.56284224989999998" blue="0.31881666180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -516,13 +516,46 @@
                     <view key="view" contentMode="scaleToFill" id="g1f-hG-OHi">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="word" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BiL-zT-sbL">
+                                <rect key="frame" x="104" y="184.5" width="112" height="112"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="BiL-zT-sbL" secondAttribute="height" multiplier="1:1" id="1Au-7H-b14"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="hP2-Jx-P8X" appends="YES" id="Bdq-bz-jEu"/>
+                                    <outletCollection property="gestureRecognizers" destination="dVG-MX-13C" appends="YES" id="dPn-pT-KPI"/>
+                                </connections>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="BiL-zT-sbL" firstAttribute="width" secondItem="g1f-hG-OHi" secondAttribute="width" multiplier="0.35" id="EYZ-sP-CfQ"/>
+                            <constraint firstItem="BiL-zT-sbL" firstAttribute="centerY" secondItem="g1f-hG-OHi" secondAttribute="centerY" id="ckz-4i-Ax1"/>
+                            <constraint firstItem="BiL-zT-sbL" firstAttribute="centerX" secondItem="g1f-hG-OHi" secondAttribute="centerX" id="fEi-pp-jIX"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Hu4-k8-L2J"/>
                     </view>
+                    <connections>
+                        <outlet property="cardLabel" destination="BiL-zT-sbL" id="VbI-9V-vup"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u4u-uh-wme" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="hP2-Jx-P8X">
+                    <connections>
+                        <action selector="cardTapped:" destination="lHG-be-3YX" id="pi4-t5-mMo"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="dVG-MX-13C">
+                    <connections>
+                        <action selector="dragTheCard:" destination="lHG-be-3YX" id="Drn-iQ-mSU"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="3932" y="26"/>
+            <point key="canvasLocation" x="3931.875" y="25"/>
         </scene>
     </scenes>
     <resources>

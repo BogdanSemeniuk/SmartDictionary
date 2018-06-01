@@ -9,15 +9,31 @@
 import Foundation
 
 protocol TrainingViewPresenter {
+    func trainingViewDidLoad()
+    func cardWasTapped()
 }
 
 class TrainingPresenter: TrainingViewPresenter {
     
     private weak var view: TrainingView?
-    private var settings: TrainingSettings
+    private var training: Training
     
-    init(view: TrainingView, settings: TrainingSettings) {
+    init(view: TrainingView, training: Training) {
         self.view = view
-        self.settings = settings
+        self.training = training
+    }
+    
+    func trainingViewDidLoad() {
+        if training.nextCard() != nil {
+            let cardTitle = training.getCard()
+            view?.set(cardTitle: cardTitle)
+        } else {
+            print("Finish!")
+        }
+    }
+    
+    func cardWasTapped() {
+        let cardTitle = training.flipCard()
+        view?.set(cardTitle: cardTitle)
     }
 }

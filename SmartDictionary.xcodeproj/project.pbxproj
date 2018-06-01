@@ -42,6 +42,8 @@
 		438117952084EEC100BA0EB7 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438117942084EEC100BA0EB7 /* MenuViewController.swift */; };
 		438117972084EFA500BA0EB7 /* MenuPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438117962084EFA500BA0EB7 /* MenuPresenter.swift */; };
 		438D057D20BDCC0E00F36C8E /* TrainingSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438D057C20BDCC0E00F36C8E /* TrainingSettings.swift */; };
+		43C1D7DA20C057C90051902F /* TrainingImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C1D7D920C057C90051902F /* TrainingImplementation.swift */; };
+		43C1D7DC20C05B940051902F /* TrainingCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C1D7DB20C05B940051902F /* TrainingCard.swift */; };
 		43F0BAA120BEB126007EA24E /* TrainingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F0BAA020BEB126007EA24E /* TrainingPresenter.swift */; };
 		43F0BAA320BEB194007EA24E /* TrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F0BAA220BEB194007EA24E /* TrainingViewController.swift */; };
 		43F1E7AC20A9CE550029C9E0 /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F1E7AB20A9CE550029C9E0 /* UILabelExtension.swift */; };
@@ -99,6 +101,8 @@
 		438117942084EEC100BA0EB7 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		438117962084EFA500BA0EB7 /* MenuPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPresenter.swift; sourceTree = "<group>"; };
 		438D057C20BDCC0E00F36C8E /* TrainingSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingSettings.swift; sourceTree = "<group>"; };
+		43C1D7D920C057C90051902F /* TrainingImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingImplementation.swift; sourceTree = "<group>"; };
+		43C1D7DB20C05B940051902F /* TrainingCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingCard.swift; sourceTree = "<group>"; };
 		43F0BAA020BEB126007EA24E /* TrainingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingPresenter.swift; sourceTree = "<group>"; };
 		43F0BAA220BEB194007EA24E /* TrainingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingViewController.swift; sourceTree = "<group>"; };
 		43F1E7AB20A9CE550029C9E0 /* UILabelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtension.swift; sourceTree = "<group>"; };
@@ -304,6 +308,8 @@
 			children = (
 				43F0BAA020BEB126007EA24E /* TrainingPresenter.swift */,
 				43F0BAA220BEB194007EA24E /* TrainingViewController.swift */,
+				43C1D7D920C057C90051902F /* TrainingImplementation.swift */,
+				43C1D7DB20C05B940051902F /* TrainingCard.swift */,
 			);
 			path = "Training Module";
 			sourceTree = "<group>";
@@ -517,6 +523,7 @@
 				4364E621208637260048E9EA /* SearchPresenter.swift in Sources */,
 				432206F9208E39FD000CADAC /* Result.swift in Sources */,
 				4364E61F208637120048E9EA /* SearchViewController.swift in Sources */,
+				43C1D7DC20C05B940051902F /* TrainingCard.swift in Sources */,
 				438117732084C0FF00BA0EB7 /* AppDelegate.swift in Sources */,
 				438117932084ECD300BA0EB7 /* Factory.swift in Sources */,
 				4358870F208E020200BF2511 /* ApiClient.swift in Sources */,
@@ -525,6 +532,7 @@
 				431EE60A2094BC600073B2AE /* StringExtension.swift in Sources */,
 				431EDD1320B441DE00DE9900 /* WordService.swift in Sources */,
 				434ED98D208A592600A427FA /* ApiRequest.swift in Sources */,
+				43C1D7DA20C057C90051902F /* TrainingImplementation.swift in Sources */,
 				43F0BAA320BEB194007EA24E /* TrainingViewController.swift in Sources */,
 				4323036620A218DD00EF5194 /* DictionaryPresenter.swift in Sources */,
 				43235D9920B822FA0070B9C4 /* TrainingSettingsPresenter.swift in Sources */,
