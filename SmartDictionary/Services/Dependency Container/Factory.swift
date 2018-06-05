@@ -30,8 +30,7 @@ protocol TrainingModulFactory {
 
 extension DependencyContainer: MenuModulFactory {
     func makeMenuModule(router: Router) -> UIViewController {
-        let storyboard = UIStoryboard(storyboard: .main)
-        let vc = storyboard.instantiateViewController(withIdentifier: "MenuViewController") as! MenuViewController
+        let vc = MenuViewController.loadFromStoryboard()
         let presenter = MenuPresenter(view: vc, router: router, menuService: wordService)
         vc.presenter = presenter
         return vc
@@ -40,8 +39,7 @@ extension DependencyContainer: MenuModulFactory {
 
 extension DependencyContainer: SearchModulFactory {
     func makeSearchModule() -> UIViewController {
-        let storyboard = UIStoryboard(storyboard: .main)
-        let vc = storyboard.instantiateViewController(withIdentifier: "SearchViewController") as! SearchViewController
+        let vc = SearchViewController.loadFromStoryboard()
         let presenter = SearchPresenter(view: vc, wordService: wordService)
         vc.presenter = presenter
         return vc
@@ -61,8 +59,7 @@ extension DependencyContainer: DictionaryModulFactory {
 
 extension DependencyContainer: TrainingSettingsModulFactory {
     func makeTrainingSettingsModule(router: Router) -> UIViewController {
-        let storyboard = UIStoryboard(storyboard: .main)
-        let vc = storyboard.instantiateViewController(withIdentifier: "TrainingSettingsViewController") as! TrainingSettingsViewController
+        let vc = TrainingSettingsViewController.loadFromStoryboard()
         let presenter = TrainingSettingsPresenter(view: vc, wordService: wordService, router: router)
         vc.presenter = presenter
         return vc
@@ -71,12 +68,10 @@ extension DependencyContainer: TrainingSettingsModulFactory {
 
 extension DependencyContainer: TrainingModulFactory {
     func makeTrainingModule(with settings: TrainingSettings) -> UIViewController {
-        let storyboard = UIStoryboard(storyboard: .main)
-        let vc = storyboard.instantiateViewController(withIdentifier: "TrainingViewController") as! TrainingViewController
+        let vc = TrainingViewController.loadFromStoryboard()
         let training = TrainingImplementation(trainingSettings: settings, storage: wordService)
         let presenter = TrainingPresenter(view: vc, training: training)
         vc.presenter = presenter
         return vc
     }
-
 }

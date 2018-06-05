@@ -14,7 +14,7 @@ protocol SearchView: class {
     func showErrorMessage(message: String)
 }
 
-class SearchViewController: UIViewController, SearchView {
+class SearchViewController: UIViewController, SearchView, StoryboardIdentifiable {
 
     // MARK: - Properties and outlet
 

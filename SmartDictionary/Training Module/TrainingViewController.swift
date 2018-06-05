@@ -12,7 +12,7 @@ protocol TrainingView: class {
     func set(cardTitle: String)
 }
 
-class TrainingViewController: UIViewController, TrainingView {
+class TrainingViewController: UIViewController, TrainingView, StoryboardIdentifiable {
 
     var presenter: TrainingViewPresenter!
 

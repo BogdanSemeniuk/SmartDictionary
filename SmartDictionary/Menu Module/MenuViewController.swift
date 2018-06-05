@@ -13,7 +13,7 @@ protocol MenuView: class {
     func showMessage()
 }
 
-class MenuViewController: UIViewController, MenuView {
+class MenuViewController: UIViewController, MenuView, StoryboardIdentifiable {
 
     // MARK: - Properties and outlet
 

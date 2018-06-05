@@ -11,6 +11,7 @@
 		4313306F20A306BE00DD916E /* DictionaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4313306D20A306BE00DD916E /* DictionaryCell.swift */; };
 		4313307020A306BE00DD916E /* DictionaryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4313306E20A306BE00DD916E /* DictionaryCell.xib */; };
 		4318A53E20C6FDE80025C91F /* UIStoryboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4318A53D20C6FDE80025C91F /* UIStoryboardExtension.swift */; };
+		4318A54820C71CDA0025C91F /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4318A54720C71CDA0025C91F /* UIViewControllerExtension.swift */; };
 		431EDD1320B441DE00DE9900 /* WordService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431EDD1220B441DE00DE9900 /* WordService.swift */; };
 		431EDD1D20B46C5D00DE9900 /* ApiClientMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431EDD1C20B46C5D00DE9900 /* ApiClientMock.swift */; };
 		431EE60A2094BC600073B2AE /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431EE6092094BC600073B2AE /* StringExtension.swift */; };
@@ -67,6 +68,7 @@
 		4313306D20A306BE00DD916E /* DictionaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryCell.swift; sourceTree = "<group>"; };
 		4313306E20A306BE00DD916E /* DictionaryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DictionaryCell.xib; sourceTree = "<group>"; };
 		4318A53D20C6FDE80025C91F /* UIStoryboardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryboardExtension.swift; sourceTree = "<group>"; };
+		4318A54720C71CDA0025C91F /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		431EDD1220B441DE00DE9900 /* WordService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordService.swift; sourceTree = "<group>"; };
 		431EDD1C20B46C5D00DE9900 /* ApiClientMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClientMock.swift; sourceTree = "<group>"; };
 		431EE6092094BC600073B2AE /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
@@ -144,6 +146,18 @@
 				4358870D208DD9A700BF2511 /* Entities */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		4318A54920C71D3C0025C91F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				431EE6092094BC600073B2AE /* StringExtension.swift */,
+				4326519320BC0B8C000649E1 /* UIViewExtension.swift */,
+				43F1E7AB20A9CE550029C9E0 /* UILabelExtension.swift */,
+				4318A53D20C6FDE80025C91F /* UIStoryboardExtension.swift */,
+				4318A54720C71CDA0025C91F /* UIViewControllerExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		4323036220A217E500EF5194 /* Dictionary Module */ = {
@@ -252,10 +266,7 @@
 			isa = PBXGroup;
 			children = (
 				438117722084C0FF00BA0EB7 /* AppDelegate.swift */,
-				431EE6092094BC600073B2AE /* StringExtension.swift */,
-				4326519320BC0B8C000649E1 /* UIViewExtension.swift */,
-				43F1E7AB20A9CE550029C9E0 /* UILabelExtension.swift */,
-				4318A53D20C6FDE80025C91F /* UIStoryboardExtension.swift */,
+				4318A54920C71D3C0025C91F /* Extensions */,
 				4308F35520A6F75000FE926B /* Models */,
 				43F0BA9F20BEAF11007EA24E /* Services */,
 				438117762084C0FF00BA0EB7 /* Main.storyboard */,
@@ -552,6 +563,7 @@
 				431EE60A2094BC600073B2AE /* StringExtension.swift in Sources */,
 				431EDD1320B441DE00DE9900 /* WordService.swift in Sources */,
 				434ED98D208A592600A427FA /* ApiRequest.swift in Sources */,
+				4318A54820C71CDA0025C91F /* UIViewControllerExtension.swift in Sources */,
 				43C1D7DA20C057C90051902F /* TrainingImplementation.swift in Sources */,
 				43F0BAA320BEB194007EA24E /* TrainingViewController.swift in Sources */,
 				4323036620A218DD00EF5194 /* DictionaryPresenter.swift in Sources */,

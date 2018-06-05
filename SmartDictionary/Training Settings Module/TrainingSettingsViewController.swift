@@ -12,7 +12,7 @@ protocol TrainingSettingsView: class {
     func setSlider(maxValue: Int)
 }
 
-class TrainingSettingsViewController: UIViewController, TrainingSettingsView {
+class TrainingSettingsViewController: UIViewController, TrainingSettingsView, StoryboardIdentifiable {
 
     var presenter: SettingsViewPresenter!
     @IBOutlet private weak var cardsLanguageSegmentedControl: UISegmentedControl!

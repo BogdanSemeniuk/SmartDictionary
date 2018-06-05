@@ -15,7 +15,7 @@ protocol DictionaryView: class {
     func giveCell(at row: Int) -> DictionaryCell
 }
 
-class DictionaryTableViewController: UITableViewController, DictionaryView {
+class DictionaryTableViewController: UITableViewController, DictionaryView, StoryboardIdentifiable {
 
     var presenter: DictionaryViewPresenter!
     private let reuseIdentifier = "dictionaryCell"
