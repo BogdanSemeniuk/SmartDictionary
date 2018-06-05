@@ -8,15 +8,14 @@
 
 import UIKit
 
-@IBDesignable extension UIView {
-    
+extension UIView {
     @IBInspectable
-    public var viewCornerRadius: CGFloat{
-        set{
+    public var viewCornerRadius: CGFloat {
+        set {
             self.layer.cornerRadius = newValue
-        }get{
+        }get {
             return self.layer.cornerRadius
         }
     }
-    
+
 }

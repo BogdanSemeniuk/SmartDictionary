@@ -13,30 +13,31 @@ protocol TrainingSettingsView: class {
 }
 
 class TrainingSettingsViewController: UIViewController, TrainingSettingsView {
-    
+
     var presenter: SettingsViewPresenter!
     @IBOutlet private weak var cardsLanguageSegmentedControl: UISegmentedControl!
     @IBOutlet private weak var randomOrderSwitch: UISwitch!
     @IBOutlet private weak var countCardsSlider: UISlider!
     @IBOutlet private weak var currentCountOfCardsLabel: UILabel!
     @IBOutlet private weak var maxCountOfCardsLabel: UILabel!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.settingsViewDidLoad()
     }
-    
+
     func setSlider(maxValue: Int) {
         maxCountOfCardsLabel.text = String(maxValue)
         countCardsSlider.minimumValue = 1.0
         countCardsSlider.maximumValue = Float(maxValue)
     }
-    
-    
+
     @IBAction private func playButtonPressed(_ sender: UIButton) {
-        presenter.currentValues(segmentIndex: cardsLanguageSegmentedControl.selectedSegmentIndex, switchIsOn: randomOrderSwitch.isOn, sliderValue: Int(countCardsSlider.value))
+        presenter.currentValues(segmentIndex: cardsLanguageSegmentedControl.selectedSegmentIndex,
+                                switchIsOn: randomOrderSwitch.isOn,
+                                sliderValue: Int(countCardsSlider.value))
     }
-    
+
     @IBAction private func sliderValueChanged(_ sender: UISlider) {
         sender.setValue(sender.value.rounded(.down), animated: true)
         currentCountOfCardsLabel.text = String(Int(countCardsSlider.value))

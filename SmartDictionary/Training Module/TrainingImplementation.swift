@@ -9,25 +9,32 @@
 import Foundation
 import RealmSwift
 
+enum NextCardResult {
+    case card
+    case cardsEnded
+}
+
 protocol Training {
-    func getCard() -> String
-    func nextCard() -> TrainingCard?
+    var familiarWordsCount: Int { get set }
+    func getCardTitle() -> String
+    func nextCard() -> NextCardResult
     func flipCard() -> String
 }
 
 class TrainingImplementation: Training {
-    
+
+    var familiarWordsCount = 0
     private var trainingSettings: TrainingSettings
     private var wordCards: Results<WordCard>
     private var cardsIndices = Set<Int>()
     private var trainingCard: TrainingCard?
-    
+
     init(trainingSettings: TrainingSettings, storage: Storage) {
         self.trainingSettings = trainingSettings
         self.wordCards = storage.wordCards
     }
-    
-    func getCard() -> String {
+
+    func getCardTitle() -> String {
         guard let trainingCard = trainingCard else { return "" }
         if trainingCard.isFlipped {
             return trainingCard.backSide
@@ -35,22 +42,22 @@ class TrainingImplementation: Training {
             return trainingCard.frontSide
         }
     }
-    
+
     func flipCard() -> String {
         if let trainingCard = trainingCard {
             self.trainingCard?.isFlipped = !trainingCard.isFlipped
         }
-        return getCard()
+        return getCardTitle()
     }
-    
-    func nextCard() -> TrainingCard? {
-        if trainingSettings.cardsCount == cardsIndices.count { return nil }
+
+    func nextCard() -> NextCardResult {
+        if trainingSettings.cardsCount == cardsIndices.count { return .cardsEnded }
         let index = getIndex()
         let trainingCard = getTrainingCard(from: wordCards[index])
         self.trainingCard = trainingCard
-        return trainingCard
+        return .card
     }
-    
+
     private func getIndex() -> Int {
         var index: Int!
         if trainingSettings.randomOrder {
@@ -64,7 +71,7 @@ class TrainingImplementation: Training {
         }
         return index
     }
-    
+
     private func getTrainingCard(from wordCard: WordCard) -> TrainingCard {
         switch trainingSettings.cardLanguage {
         case .english:

@@ -11,7 +11,7 @@ import Foundation
 
 class RouterSpy: Router {
     var currentNavigation: Destination?
-    
+
     override func navigate(to destination: Router.Destination) {
         currentNavigation = destination
     }

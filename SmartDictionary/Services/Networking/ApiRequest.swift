@@ -9,7 +9,6 @@
 import Foundation
 import Alamofire
 
-
 enum APIRequest {
     case translate(word: String)
 }
@@ -21,7 +20,7 @@ extension APIRequest: URLRequestConvertible {
             return .get
         }
     }
-    
+
     private var task: [URLQueryItem]? {
         switch self {
         case .translate(let word):
@@ -33,7 +32,7 @@ extension APIRequest: URLRequestConvertible {
             return [languageFromQuery, languageIntoQuery, returnTypeQuery, phraseQuery, prettyQuery]
         }
     }
-    
+
     func asURLRequest() throws -> URLRequest {
         var urlComponents = URLComponents(string: APIConstants.baseURL)
         urlComponents?.queryItems = task

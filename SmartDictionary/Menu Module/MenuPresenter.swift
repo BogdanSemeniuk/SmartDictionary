@@ -16,39 +16,39 @@ protocol MenuViewPresenter {
 }
 
 class MenuPresenter: MenuViewPresenter {
-    
+
     // MARK: - Properties
-    
+
     private weak var view: MenuView?
     private var router: Router
     private var menuService: Storage
-    
+
     // MARK: - Initializer
-    
+
     init(view: MenuView?, router: Router, menuService: Storage) {
         self.view = view
         self.router = router
         self.menuService = menuService
     }
-    
+
     deinit { print("MenuPresenter deinit") }
-    
+
     // MARK: - Setup view
-    
+
     func viewWasLoaded() {
         view?.setupView()
     }
-    
+
     // MARK: - Handling actions
-    
+
     func searchButtonWasTapped() {
         router.navigate(to: .search)
     }
-    
+
     func dictionaryButtonWasTapped() {
         router.navigate(to: .dictionary)
     }
-    
+
     func trainingButtonWasTapped() {
         if menuService.wordCards.isEmpty {
             view?.showMessage()

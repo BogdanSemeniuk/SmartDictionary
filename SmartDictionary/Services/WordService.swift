@@ -11,7 +11,7 @@ import RealmSwift
 
 protocol WordSearch {
     func add(word: WordCard?)
-    func translate(word: String, complitionHandler: @escaping (Result<WordDetails>) -> ())
+    func translate(word: String, complitionHandler: @escaping (Result<WordDetails>) -> Void)
 }
 
 protocol WordsStorage {
@@ -30,32 +30,32 @@ class WordService: WordSearch, WordsStorage, Storage {
     var wordCards: Results<WordCard> {
         return storage.objects(WordCard.self)
     }
-    
+
     init(storage: Realm, apiClient: ApiClient) {
         self.storage = storage
         self.apiClient = apiClient
     }
-    
-    func add(word: WordCard?)  {
+
+    func add(word: WordCard?) {
         guard let word = word, storage.object(ofType: WordCard.self, forPrimaryKey: word.value) == nil else { return }
         try! storage.write {
             storage.add(word)
         }
     }
-    
+
     func flip(wordCard: WordCard) {
         try! storage.write {
             wordCard.isFlipped = !wordCard.isFlipped
         }
     }
-    
+
     func delete(wordCard: WordCard) {
         try! storage.write {
             storage.delete(wordCard)
         }
     }
-    
-    func translate(word: String, complitionHandler: @escaping (Result<WordDetails>) -> ()) {
+
+    func translate(word: String, complitionHandler: @escaping (Result<WordDetails>) -> Void) {
         let urlRequest = try! APIRequest.translate(word: word).asURLRequest()
         apiClient.execute(request: urlRequest) { (result: Result<ApiResponse>) in
             switch result {

@@ -11,29 +11,41 @@ import Foundation
 protocol TrainingViewPresenter {
     func trainingViewDidLoad()
     func cardWasTapped()
+    func cardWasDragged(isFamiliarWord: Bool)
 }
 
 class TrainingPresenter: TrainingViewPresenter {
-    
+
     private weak var view: TrainingView?
     private var training: Training
-    
+
     init(view: TrainingView, training: Training) {
         self.view = view
         self.training = training
     }
-    
+
     func trainingViewDidLoad() {
-        if training.nextCard() != nil {
-            let cardTitle = training.getCard()
-            view?.set(cardTitle: cardTitle)
-        } else {
-            print("Finish!")
-        }
+        getNextCard()
     }
-    
+
     func cardWasTapped() {
         let cardTitle = training.flipCard()
         view?.set(cardTitle: cardTitle)
+    }
+
+    func cardWasDragged(isFamiliarWord: Bool) {
+        if isFamiliarWord {
+            training.familiarWordsCount += 1
+        }
+        getNextCard()
+    }
+
+    private func getNextCard() {
+        switch training.nextCard() {
+        case .card:
+            view?.set(cardTitle: training.getCardTitle())
+        case .cardsEnded:
+            break
+        }
     }
 }

@@ -18,17 +18,17 @@ class DictionaryCell: UITableViewCell, DictionaryCellView {
     @IBOutlet weak var numberLabel: UILabel!
     @IBOutlet weak var wordLabel: UILabel!
     @IBOutlet weak var flagLabel: UILabel!
-    
+
     func display(number: String, word: String, flag: String) {
         numberLabel.text = number
         wordLabel.text = word
         flagLabel.text = flag
     }
-    
+
     static func giveSelfNib() -> UINib {
         return UINib(nibName: "DictionaryCell", bundle: nil)
     }
-    
+
     func changeWordWithAnimation(to newWord: String, flag: String) {
         wordLabel.animateAdding(0.8, newText: newWord)
         flagLabel.text = flag

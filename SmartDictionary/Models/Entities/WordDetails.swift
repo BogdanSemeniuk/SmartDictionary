@@ -26,5 +26,3 @@ struct Meaning: Decodable {
     var text: String
     var language: String
 }
-
-

@@ -10,7 +10,7 @@ import XCTest
 @testable import SmartDictionary
 
 class ApiClientMock: ApiClient {
-    
+
     var typeOfResponse: Response = .getSuccess
     private let error = MockError(description: "Some error")
     var data: Data {
@@ -18,7 +18,7 @@ class ApiClientMock: ApiClient {
         let data = try! Data(contentsOf: urlForData!)
         return data
     }
-    
+
     func execute(request: URLRequest, completionHandler: @escaping (Result<ApiResponse>) -> Void) {
         let response = HTTPURLResponse(url: URL(string: "url")!, statusCode: 200, httpVersion: "HTTP/1.1", headerFields: nil)!
         switch typeOfResponse {

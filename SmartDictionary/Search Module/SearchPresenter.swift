@@ -20,7 +20,7 @@ protocol SearchViewPresenter {
 class SearchPresenter: SearchViewPresenter {
 
     // MARK: - Properties
-    
+
     private weak var view: SearchView?
     private var wordService: WordSearch
     private var wordDetails: WordDetails?
@@ -31,17 +31,17 @@ class SearchPresenter: SearchViewPresenter {
     var numberOfItems: Int {
         return wordDetails?.tuc.count ?? 0
     }
-    
+
     // MARK: - Initializer
-    
+
     init(view: SearchView?, wordService: WordSearch) {
         self.view = view
         self.wordService = wordService
     }
     deinit { print("SearchPresenter deinit") }
-    
+
     // MARK: - Action handling
-    
+
     func searchButtonPressed(text: String) {
         wordService.translate(word: text, complitionHandler: { [weak self] result in
             switch result {
@@ -53,23 +53,23 @@ class SearchPresenter: SearchViewPresenter {
             }
         })
     }
-    
+
     func addToDictionaryWasTapped() {
         wordService.add(word: word)
     }
-    
+
     // MARK: - Error handling
-    
+
     private func handleError(_ error: ErrorDescription) {
         view?.showErrorMessage(message: error.description)
     }
-    
+
     // MARK: - View customization
-    
+
     func searchViewDidLoad() {
         view?.setupView()
     }
-    
+
     func configure(cell: MeaningCellView, forRow row: Int) {
         guard let wordParts = wordDetails?.tuc else { return }
         let wordPart = wordParts[row]

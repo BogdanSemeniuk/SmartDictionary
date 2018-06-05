@@ -14,21 +14,21 @@ protocol SettingsViewPresenter {
 }
 
 class TrainingSettingsPresenter: SettingsViewPresenter {
-    
+
     private weak var view: TrainingSettingsView?
     private var wordService: Storage
     private var router: Router
-    
+
     init(view: TrainingSettingsView, wordService: Storage, router: Router) {
         self.view = view
         self.wordService = wordService
         self.router = router
     }
-    
+
     func settingsViewDidLoad() {
         view?.setSlider(maxValue: wordService.wordCards.count)
     }
-    
+
     func currentValues(segmentIndex: Int, switchIsOn: Bool, sliderValue: Int) {
         var language = CardLanguage.random
         switch segmentIndex {

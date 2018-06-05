@@ -16,7 +16,7 @@ protocol Description {
 
 struct NetworkRequestError: ErrorDescription {
     let error: Error?
-    
+
     var description: String {
         return error?.localizedDescription ?? "Network request error - no other information"
     }
@@ -41,4 +41,3 @@ struct ApiError: ErrorDescription {
         }
     }
 }
-

@@ -22,13 +22,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.rootViewController = navController
         return Router(navigationController: navController, dependencyContainer: dependencyContainer)
     }()
-    
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         router.navigate(to: .menu)
         print(Realm.Configuration.defaultConfiguration.fileURL!)
         return true
     }
-    
+
     private func setup(navigationController: UINavigationController) {
         let navigationBarAppearace = UINavigationBar.appearance()
         let greenColor = UIColor(red: 0, green: 144/255, blue: 81/255, alpha: 1)
@@ -38,7 +38,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             [.foregroundColor: UIColor.white,
             .font: UIFont(name: "AmericanTypewriter-Bold", size: 18) as Any]
         navigationController.navigationBar.titleTextAttributes = titleTextAttributed
-        
+
     }
 }
-

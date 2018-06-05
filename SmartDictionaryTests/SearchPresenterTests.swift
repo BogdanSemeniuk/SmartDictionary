@@ -11,11 +11,11 @@ import RealmSwift
 @testable import SmartDictionary
 
 class SearchPresenterTests: XCTestCase {
-    
+
     var wordService: WordService!
     var apiClient: ApiClientMock!
     var searchPresenter: SearchPresenter!
-    
+
     override func setUp() {
         super.setUp()
         let storage = try! Realm(configuration: Realm.Configuration(inMemoryIdentifier: self.name))
@@ -23,14 +23,13 @@ class SearchPresenterTests: XCTestCase {
         wordService = WordService(storage: storage, apiClient: apiClient)
         searchPresenter = SearchPresenter(view: nil, wordService: wordService)
     }
-    
+
     override func tearDown() {
         wordService = nil
         searchPresenter = nil
         super.tearDown()
     }
-    
-    
+
     func testWordDetailsSetWhenResponseReceived() {
         // 1. given
         apiClient.typeOfResponse = .getSuccess
@@ -48,7 +47,7 @@ class SearchPresenterTests: XCTestCase {
         // 3. then
         XCTAssert(searchPresenter.numberOfItems == 0)
     }
-    
+
     func testAddWordToStoreWhenAddButtonPressed() {
         // 1. given
         apiClient.typeOfResponse = .getSuccess

@@ -1,0 +1,9 @@
+disabled_rules:
+    - force_cast
+    - force_try
+excluded:
+    - Pods
+
+line_length: 150
+identifier_name:
+    min_length: 2

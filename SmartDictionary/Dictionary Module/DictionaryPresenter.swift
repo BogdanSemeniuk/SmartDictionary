@@ -18,15 +18,15 @@ protocol DictionaryViewPresenter {
 }
 
 class DictionaryPresenter: DictionaryViewPresenter {
-    
+
     private weak var view: DictionaryView?
     private var wordService: WordsStorage
     var numberOfItems: Int {
         return wordCards.count
     }
     private var wordCards: Results<WordCard>
-    private var notificationToken: NotificationToken? = nil
-    
+    private var notificationToken: NotificationToken?
+
     init(view: DictionaryView?, wordService: WordsStorage) {
         self.view = view
         self.wordService = wordService
@@ -36,37 +36,37 @@ class DictionaryPresenter: DictionaryViewPresenter {
         print("DictionaryPresenter deinit")
         notificationToken?.invalidate()
     }
-    
+
     func dictionaryViewDidLoad() {
         notificationsHandling(results: wordCards)
-        
+
         view?.setUpTableView(with: DictionaryCell.giveSelfNib())
     }
-    
+
     func configure(cell: DictionaryCellView, forRow row: Int) {
         let num = String(row + 1)
         let word = wordCards[row].isFlipped ? wordCards[row].translation : wordCards[row].value
         let flag = wordCards[row].isFlipped ? "🇷🇺" : "🇬🇧"
         cell.display(number: num, word: word, flag: flag)
     }
-    
+
     func selected(cell: DictionaryCellView, forRow row: Int) {
         let wordCard = wordCards[row]
         wordService.flip(wordCard: wordCard)
     }
-    
+
     func cellDeleted(forRow row: Int) {
         let wordCard = wordCards[row]
         wordService.delete(wordCard: wordCard)
     }
-    
+
     private func changeWordWithAnimation(in cell: DictionaryCellView, forRow row: Int) {
         let word = wordCards[row].isFlipped ? wordCards[row].translation : wordCards[row].value
         let flag = wordCards[row].isFlipped ? "🇷🇺" : "🇬🇧"
         cell.changeWordWithAnimation(to: word, flag: flag)
     }
-    
-    private func notificationsHandling(results: Results<WordCard>)  {
+
+    private func notificationsHandling(results: Results<WordCard>) {
         notificationToken = results.observe({ [weak self] (changes: RealmCollectionChange) in
             switch changes {
             case .update(_, let deletions, let insertions, let modifications):
