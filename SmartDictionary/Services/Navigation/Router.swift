@@ -29,7 +29,14 @@ class Router: Navigator {
 
     func navigate(to destination: Router.Destination) {
         let vc = makeModul(for: destination)
-        navigationController?.pushViewController(vc, animated: true)
+        switch destination {
+        case .result:
+            vc.modalPresentationStyle = .overCurrentContext
+            vc.modalTransitionStyle = .crossDissolve
+            navigationController?.present(vc, animated: true, completion: nil)
+        default:
+            navigationController?.pushViewController(vc, animated: true)
+        }
     }
 
     private func makeModul(for destination: Destination) -> UIViewController {
@@ -38,7 +45,8 @@ class Router: Navigator {
         case .search: return dependencyContainer.makeSearchModule()
         case .dictionary: return dependencyContainer.makeDictionaryModule()
         case .trainingSettings: return dependencyContainer.makeTrainingSettingsModule(router: self)
-        case .training(let settings): return dependencyContainer.makeTrainingModule(with: settings)
+        case .training(let settings): return dependencyContainer.makeTrainingModule(with: settings, router: self)
+        case .result(let result): return dependencyContainer.makeResultModule(with: result, router: self)
         }
     }
 }
@@ -52,5 +60,6 @@ extension Router {
         case dictionary
         case trainingSettings
         case training(TrainingSettings)
+        case result(Double)
     }
 }

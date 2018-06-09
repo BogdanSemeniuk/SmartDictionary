@@ -16,6 +16,7 @@ enum NextCardResult {
 
 protocol Training {
     var familiarWordsCount: Int { get set }
+    var result: Double { get }
     func getCardTitle() -> String
     func nextCard() -> NextCardResult
     func flipCard() -> String
@@ -28,6 +29,9 @@ class TrainingImplementation: Training {
     private var wordCards: Results<WordCard>
     private var cardsIndices = Set<Int>()
     private var trainingCard: TrainingCard?
+    var result: Double {
+        return Double(100 * familiarWordsCount) / Double(cardsIndices.count)
+    }
 
     init(trainingSettings: TrainingSettings, storage: Storage) {
         self.trainingSettings = trainingSettings

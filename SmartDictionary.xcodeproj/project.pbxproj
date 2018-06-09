@@ -23,6 +23,8 @@
 		43235D9920B822FA0070B9C4 /* TrainingSettingsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43235D9820B822FA0070B9C4 /* TrainingSettingsPresenter.swift */; };
 		4326519420BC0B8C000649E1 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4326519320BC0B8C000649E1 /* UIViewExtension.swift */; };
 		4329B913209B5B35001D5E6D /* WordCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4329B912209B5B35001D5E6D /* WordCard.swift */; };
+		432AB48A20C9796A00D94773 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432AB48920C9796A00D94773 /* ResultViewController.swift */; };
+		432AB48C20C9799100D94773 /* ResultPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432AB48B20C9799100D94773 /* ResultPresenter.swift */; };
 		434ED98D208A592600A427FA /* ApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434ED98C208A592600A427FA /* ApiRequest.swift */; };
 		434ED98F208A594400A427FA /* ApiConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434ED98E208A594400A427FA /* ApiConstants.swift */; };
 		4358870B208DD94600BF2511 /* WordDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4358870A208DD94600BF2511 /* WordDetails.swift */; };
@@ -80,6 +82,8 @@
 		43235D9820B822FA0070B9C4 /* TrainingSettingsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingSettingsPresenter.swift; sourceTree = "<group>"; };
 		4326519320BC0B8C000649E1 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		4329B912209B5B35001D5E6D /* WordCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordCard.swift; sourceTree = "<group>"; };
+		432AB48920C9796A00D94773 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		432AB48B20C9799100D94773 /* ResultPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultPresenter.swift; sourceTree = "<group>"; };
 		434142B620C2DC6A00BB3049 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = SOURCE_ROOT; };
 		434ED98C208A592600A427FA /* ApiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequest.swift; sourceTree = "<group>"; };
 		434ED98E208A594400A427FA /* ApiConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConstants.swift; sourceTree = "<group>"; };
@@ -270,6 +274,8 @@
 				4308F35520A6F75000FE926B /* Models */,
 				43F0BA9F20BEAF11007EA24E /* Services */,
 				438117762084C0FF00BA0EB7 /* Main.storyboard */,
+				432AB48920C9796A00D94773 /* ResultViewController.swift */,
+				432AB48B20C9799100D94773 /* ResultPresenter.swift */,
 				43F0BAA420BEB29D007EA24E /* Training Module */,
 				43235D9720B8226D0070B9C4 /* Training Settings Module */,
 				4323036220A217E500EF5194 /* Dictionary Module */,
@@ -554,6 +560,7 @@
 				4364E621208637260048E9EA /* SearchPresenter.swift in Sources */,
 				432206F9208E39FD000CADAC /* Result.swift in Sources */,
 				4364E61F208637120048E9EA /* SearchViewController.swift in Sources */,
+				432AB48C20C9799100D94773 /* ResultPresenter.swift in Sources */,
 				43C1D7DC20C05B940051902F /* TrainingCard.swift in Sources */,
 				438117732084C0FF00BA0EB7 /* AppDelegate.swift in Sources */,
 				438117932084ECD300BA0EB7 /* Factory.swift in Sources */,
@@ -568,6 +575,7 @@
 				43F0BAA320BEB194007EA24E /* TrainingViewController.swift in Sources */,
 				4323036620A218DD00EF5194 /* DictionaryPresenter.swift in Sources */,
 				43235D9920B822FA0070B9C4 /* TrainingSettingsPresenter.swift in Sources */,
+				432AB48A20C9796A00D94773 /* ResultViewController.swift in Sources */,
 				43235D9620B822530070B9C4 /* TrainingSettingsViewController.swift in Sources */,
 				43F0BAA120BEB126007EA24E /* TrainingPresenter.swift in Sources */,
 				4318A53E20C6FDE80025C91F /* UIStoryboardExtension.swift in Sources */,

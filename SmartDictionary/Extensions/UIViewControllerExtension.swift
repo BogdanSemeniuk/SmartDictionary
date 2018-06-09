@@ -10,6 +10,7 @@ import UIKit
 
 protocol StoryboardIdentifiable {
     static var storyboardIdentifier: String { get }
+    static func loadFromStoryboard() -> Self
 }
 
 extension StoryboardIdentifiable where Self: UIViewController {
@@ -20,7 +21,7 @@ extension StoryboardIdentifiable where Self: UIViewController {
     static func loadFromStoryboard() -> Self {
         let storyboard = UIStoryboard(storyboard: .main)
 
-        guard let vc = storyboard.instantiateViewController(withIdentifier: self.storyboardIdentifier) as? Self else {
+        guard let vc = storyboard.instantiateViewController(withIdentifier: Self.storyboardIdentifier) as? Self else {
             fatalError("UIStoryboardLoadable: can not load viewcontroller with identifier '\(self.storyboardIdentifier)' from storyboard.")
         }
         return vc

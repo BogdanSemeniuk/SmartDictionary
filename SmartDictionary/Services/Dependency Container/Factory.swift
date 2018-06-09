@@ -25,7 +25,11 @@ protocol TrainingSettingsModulFactory {
 }
 
 protocol TrainingModulFactory {
-    func makeTrainingModule(with settings: TrainingSettings) -> UIViewController
+    func makeTrainingModule(with settings: TrainingSettings, router: Router) -> UIViewController
+}
+
+protocol ResultModulFactory {
+    func makeResultModule(with result: Double, router: Router) -> UIViewController
 }
 
 extension DependencyContainer: MenuModulFactory {
@@ -67,11 +71,20 @@ extension DependencyContainer: TrainingSettingsModulFactory {
 }
 
 extension DependencyContainer: TrainingModulFactory {
-    func makeTrainingModule(with settings: TrainingSettings) -> UIViewController {
+    func makeTrainingModule(with settings: TrainingSettings, router: Router) -> UIViewController {
         let vc = TrainingViewController.loadFromStoryboard()
         let training = TrainingImplementation(trainingSettings: settings, storage: wordService)
-        let presenter = TrainingPresenter(view: vc, training: training)
+        let presenter = TrainingPresenter(view: vc, training: training, router: router)
         vc.presenter = presenter
+        return vc
+    }
+}
+
+extension DependencyContainer: ResultModulFactory {
+    func makeResultModule(with result: Double, router: Router) -> UIViewController {
+        let vc = ResultViewController.loadFromStoryboard()
+        let resultPresenter = ResultPresenter(view: vc, result: result, router: router)
+        vc.presenter = resultPresenter
         return vc
     }
 }

@@ -18,10 +18,12 @@ class TrainingPresenter: TrainingViewPresenter {
 
     private weak var view: TrainingView?
     private var training: Training
+    private var router: Router
 
-    init(view: TrainingView, training: Training) {
+    init(view: TrainingView, training: Training, router: Router) {
         self.view = view
         self.training = training
+        self.router = router
     }
 
     func trainingViewDidLoad() {
@@ -45,7 +47,7 @@ class TrainingPresenter: TrainingViewPresenter {
         case .card:
             view?.set(cardTitle: training.getCardTitle())
         case .cardsEnded:
-            break
+            router.navigate(to: .result(training.result))
         }
     }
 }
