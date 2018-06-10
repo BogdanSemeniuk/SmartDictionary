@@ -31,8 +31,6 @@ class Router: Navigator {
         let vc = makeModul(for: destination)
         switch destination {
         case .result:
-            vc.modalPresentationStyle = .overCurrentContext
-            vc.modalTransitionStyle = .crossDissolve
             navigationController?.present(vc, animated: true, completion: nil)
         default:
             navigationController?.pushViewController(vc, animated: true)

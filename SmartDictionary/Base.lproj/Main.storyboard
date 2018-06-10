@@ -178,7 +178,7 @@
                                 <rect key="frame" x="0.0" y="96" width="375" height="518"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MeaningTableViewCell" rowHeight="100" id="vnS-m9-lUI" customClass="MeaningTableViewCell" customModule="SmartDictionary" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MeaningTableViewCell" rowHeight="100" id="vnS-m9-lUI" customClass="MeaningTableViewCell" customModule="SmartDictionary" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vnS-m9-lUI" id="TrS-o3-a7D">
@@ -639,7 +639,7 @@
         <!--Result View Controller-->
         <scene sceneID="Ck8-fW-dBu">
             <objects>
-                <viewController storyboardIdentifier="ResultViewController" id="d5F-Ca-aSK" customClass="ResultViewController" customModule="SmartDictionary" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ResultViewController" modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="d5F-Ca-aSK" customClass="ResultViewController" customModule="SmartDictionary" customModuleProvider="target" sceneMemberID="viewController">
                     <visualEffectView key="view" opaque="NO" contentMode="scaleToFill" id="j0O-8x-ZIV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
