@@ -9,6 +9,8 @@
 import Foundation
 
 protocol ResultViewPresenter {
+    func resultViewDidLoad()
+    func okButtonWasPressed()
 }
 
 class ResultPresenter: ResultViewPresenter {
@@ -23,4 +25,13 @@ class ResultPresenter: ResultViewPresenter {
         self.router = router
     }
 
+    deinit { print("ResultPresenter deinit") }
+
+    func resultViewDidLoad() {
+        view?.setResultLabel(with: result)
+    }
+
+    func okButtonWasPressed() {
+        router.navigate(to: .returnToMenu)
+    }
 }

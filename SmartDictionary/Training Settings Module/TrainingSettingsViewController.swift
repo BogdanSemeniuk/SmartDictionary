@@ -21,6 +21,8 @@ class TrainingSettingsViewController: UIViewController, TrainingSettingsView, St
     @IBOutlet private weak var currentCountOfCardsLabel: UILabel!
     @IBOutlet private weak var maxCountOfCardsLabel: UILabel!
 
+    deinit { print("TrainingSettingsViewController deinit") }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.settingsViewDidLoad()

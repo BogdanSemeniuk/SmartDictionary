@@ -32,6 +32,9 @@ class Router: Navigator {
         switch destination {
         case .result:
             navigationController?.present(vc, animated: true, completion: nil)
+        case .returnToMenu:
+            navigationController?.dismiss(animated: true, completion: nil)
+            navigationController?.viewControllers = [vc]
         default:
             navigationController?.pushViewController(vc, animated: true)
         }
@@ -45,6 +48,7 @@ class Router: Navigator {
         case .trainingSettings: return dependencyContainer.makeTrainingSettingsModule(router: self)
         case .training(let settings): return dependencyContainer.makeTrainingModule(with: settings, router: self)
         case .result(let result): return dependencyContainer.makeResultModule(with: result, router: self)
+        case .returnToMenu: return dependencyContainer.makeMenuModule(router: self)
         }
     }
 }
@@ -59,5 +63,6 @@ extension Router {
         case trainingSettings
         case training(TrainingSettings)
         case result(Double)
+        case returnToMenu
     }
 }

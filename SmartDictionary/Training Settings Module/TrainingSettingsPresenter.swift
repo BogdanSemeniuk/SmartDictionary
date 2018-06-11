@@ -25,6 +25,8 @@ class TrainingSettingsPresenter: SettingsViewPresenter {
         self.router = router
     }
 
+    deinit { print("TrainingSettingsPresenter deinit") }
+
     func settingsViewDidLoad() {
         view?.setSlider(maxValue: wordService.wordCards.count)
     }

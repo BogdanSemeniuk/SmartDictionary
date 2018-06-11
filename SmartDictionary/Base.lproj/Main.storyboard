@@ -669,6 +669,9 @@
                                                 <constraint firstAttribute="width" secondItem="dSf-lk-I3c" secondAttribute="height" multiplier="1:1" id="emF-6N-5nC"/>
                                             </constraints>
                                             <state key="normal" title="Button" image="ok"/>
+                                            <connections>
+                                                <action selector="okButtonPressed:" destination="d5F-Ca-aSK" eventType="touchUpInside" id="YXl-oB-7Dd"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <color key="backgroundColor" white="0.97619249131944441" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -708,6 +711,9 @@
                         </view>
                         <blurEffect style="light"/>
                     </visualEffectView>
+                    <connections>
+                        <outlet property="resultLabel" destination="7x3-dh-caq" id="v3p-Jv-912"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="egY-Ol-7V2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

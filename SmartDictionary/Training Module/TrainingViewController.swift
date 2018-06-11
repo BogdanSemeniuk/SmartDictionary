@@ -24,6 +24,8 @@ class TrainingViewController: UIViewController, TrainingView, StoryboardIdentifi
         }
     }
 
+     deinit { print("TrainingViewController deinit") }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 

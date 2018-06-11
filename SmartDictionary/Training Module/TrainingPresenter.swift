@@ -26,6 +26,8 @@ class TrainingPresenter: TrainingViewPresenter {
         self.router = router
     }
 
+    deinit { print("TrainingPresenter deinit") }
+
     func trainingViewDidLoad() {
         getNextCard()
     }

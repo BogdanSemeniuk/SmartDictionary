@@ -38,6 +38,8 @@ class TrainingImplementation: Training {
         self.wordCards = storage.wordCards
     }
 
+    deinit { print("TrainingImplementation deinit") }
+
     func getCardTitle() -> String {
         guard let trainingCard = trainingCard else { return "" }
         if trainingCard.isFlipped {
