@@ -10,7 +10,7 @@ import XCTest
 import RealmSwift
 @testable import SmartDictionary
 
-class MenuTests: XCTestCase {
+class MenuPresenterTests: XCTestCase {
 
     var menuPresenter: MenuPresenter!
     var router: RouterSpy!
